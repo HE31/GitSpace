@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zlzkj.app.mapper.WdbRepaymentsMapper" >
+  <resultMap id="BaseResultMap" type="com.zlzkj.app.model.WdbRepayments" >
+    <id column="Id" property="id" jdbcType="INTEGER" />
+    <result column="OrderNumber" property="ordernumber" jdbcType="VARCHAR" />
+    <result column="CustName" property="custname" jdbcType="VARCHAR" />
+    <result column="Detail" property="detail" jdbcType="VARCHAR" />
+    <result column="CreateDate" property="createdate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from wdb_repayments
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zlzkj.app.model.WdbRepayments" >
+    insert into wdb_repayments (Id, OrderNumber, CustName, 
+      Detail, CreateDate)
+    values (#{id,jdbcType=INTEGER}, #{ordernumber,jdbcType=VARCHAR}, #{custname,jdbcType=VARCHAR}, 
+      #{detail,jdbcType=VARCHAR}, #{createdate,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.zlzkj.app.model.WdbRepayments" >
+    update wdb_repayments
+    set OrderNumber = #{ordernumber,jdbcType=VARCHAR},
+      CustName = #{custname,jdbcType=VARCHAR},
+      Detail = #{detail,jdbcType=VARCHAR},
+      CreateDate = #{createdate,jdbcType=TIMESTAMP}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select Id, OrderNumber, CustName, Detail, CreateDate
+    from wdb_repayments
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Id, OrderNumber, CustName, Detail, CreateDate
+    from wdb_repayments
+  </select>
+</mapper>
