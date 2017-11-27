@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.WdbOrdersMapperCustom" >
+<resultMap type="cn.itcast.ssm.po.WdbOrdersQueryVo" id="OrderResultMap">
+ <id property="ordernumber" column="OrderNumber"  /> 
+  <result property="orderdate" column="OrderDate" /> 
+    <result property="times" column="Times" />
+      <result property="hasfirstpay" column="HasFirstPay" />
+        <result property="repayment" column="Repayment" />
+          <result property="customerid" column="CustomerId" />
+            <result property="employeeid" column="EmployeeId" />
+             <result property="productnumber" column="ProductNumber" /> 
+              <result property="orderstatus" column="OrderStatus" /> 
+
+ <association property="wdbProductsCustom" javaType="cn.itcast.ssm.po.WdbProductsCustom">    
+            <id  column="ProductNumber" property="productnumber" />    
+            <result  column="ProductName" property="productname" />
+           <result  column="ProductDescription" property="productdescription" />
+           <result  column="QuotoPrice" property="quotoprice" /> 
+             <result column="RetailPrice" property="retailprice" />
+              <result  column="ImageUrls" property="imageurls" /> 
+              <result  column="QuantityOnHand" property="quantityonhand" /> 
+              <result  column="CategoryId" property="categoryid" /> 
+        </association>    
+
+ <association property="wdbStagesCustom" javaType="cn.itcast.ssm.po.WdbStagesCustom">    
+            <id  column="OrderNumber" property="ordernumber" />    
+            <result  column="Time" property="time" />
+           <result  column="BeginDate" property="begindate" />
+           <result  column="EndDate" property="enddate" /> 
+             <result column="PayDate" property="paydate" />
+              <result  column="RepayStatus" property="repaystatus" /> 
+              <result  column="money" property="money" />       
+        </association>
+        
+      
+</resultMap>
+
+ <select id="findOrderByCustomerId" 
+  		  resultMap="OrderResultMap">
+  		 
+  select * from ((wdb_orders o join wdb_products p USING(ProductNumber)) join wdb_stages s USING(OrderNumber)) join wdb_customers USING(CustomerId) where o.CustomerId=#{CustomerId} and s.RepayStatus in(0,-1) group by o.OrderNumber order by o.OrderDate desc
+  	</select> 
+  	<select id="findAllOrdersByCustomerId" 
+  		  resultMap="OrderResultMap">
+  	 select * from ((wdb_orders o join wdb_products p USING(ProductNumber)) join wdb_stages s USING(OrderNumber)) join wdb_customers USING(CustomerId) where o.CustomerId=#{CustomerId} group by o.OrderNumber order by o.OrderDate desc
+  	</select>
+  <select id="findOrderByCustomerIdAndOrderNumber" 
+  		  resultMap="OrderResultMap">
+  	 select * from ((wdb_orders o join wdb_products p USING(ProductNumber)) join wdb_stages s USING(OrderNumber)) join wdb_customers USING(CustomerId) where o.CustomerId=#{param1} and o.OrderNumber=#{param2} and s.RepayStatus in(0,-1) group by o.OrderNumber order by o.OrderDate desc 
+  	</select>
+  	  <select id="findOrderCountByCustomerId" 
+  		  resultType="java.lang.Integer">
+  	 select count(*) from ((wdb_orders o join wdb_products p USING(ProductNumber)) join wdb_stages s USING(OrderNumber)) join wdb_customers USING(CustomerId) where o.CustomerId=#{param1} and o.OrderNumber=#{param2} and s.RepayStatus in(0,-1) 
+  	</select>
+</mapper>

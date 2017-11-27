@@ -1,0 +1,26 @@
+/* .wrapLogin{padding:30px 0;background:#f8f8f8}.conwrapLogin{width:1180px;margin:0 auto;background:#fff}.conwrapLogin .logo-login{padding-right:20px;text-align:right}.conwrapLogin .logo-login img{width:140px;height:52px}.contentLogin{padding:30px 35px}.titleLogin{padding-bottom:10px;font-size:18px}.contentLogin .imgLoginAD{float:left;margin:0 70px 0 50px}.infoLogin{position:relative;float:left;width:319px;padding:5px 0 70px 100px;border-left:1px solid #E0E0E0}.errorRegin{display:none;position:absolute;top:34px;left:145px;width:272px;height:26px;line-height:26px;z-index:1000;background-color:#ffe3d6;color:red;text-align:center}.loginForm{margin:20px 0 0 0}.loginInfoSubmit{position:relative}.loginInfoSubmit dd{padding:8px 0;*width:330px}.loginInfoSubmit dd.lineRememberMe{position:relative}.loginInfoSubmit dd.lineRememberMe .forgetpwd{position:absolute;top:6px;*top:7px;right:0;*right:10px;color:#B9B9B9}.loginInfoSubmit dd.lineRememberMe .forgetpwd:hover{color:#2897F6}.loginInfoSubmit dd span{font-size:14px}.loginInfoSubmit dd span.spanValidateCode{display:inline-block;margin:0 0 0 -14px}.loginInfoSubmit .typeText{width:260px;padding:10px 5px;outline:0 none;border:1px solid #E2E2E2}.loginInfoSubmit .ddValidateRegin{display:none}.loginInfoSubmit .typeValidate{width:100px;padding:10px 5px;outline:0 none;border:1px solid #E2E2E2}.loginInfoSubmit .picValidateCode{display:inline-block;width:100px;height:36px;vertical-align:bottom}.loginInfoSubmit .typeCheckbox{margin:0 0 0 45px;outline:0 none}.loginInfoSubmit .chkLabel{position:absolute;top:6px;*top:7px;left:65px}.loginInfoSubmit .typeSubmit{width:274px;padding:10px 100px;color:#fff;border:1px solid #FFAE00;*border:0 none;border-radius:2px;outline:0;background-image:none;background-color:#FFBA27;margin:0 0 0 45px;font-size:18px}.jumpLink{margin:5px 0 0 45px}.jumpLink .rrAccountLogin{display:inline-block;float:left;padding:8px 20px;color:#fff;font-size:16px;border:1px solid #2897F6;border-radius:2px;background:#42A7FF}.jumpLink .registerNewAccount{float:right;color:#666;font-size:16px;line-height:36px}.jumpLink .registerNewAccount:hover{color:#0789FC}.forgetPassWord{margin:5px 0 0 45px}.forgetPassWord a{color:#B9B9B9}.forgetPassWord a:hover{color:#2897F6} */
+
+
+.login-box{height:451px;background:url(../images/nbg.png) 50% 0;}
+.login-box .login-main{width:390px;height:279px;background:url(../images/login-bg.png);margin-top:80px;padding:25px 25px 10px 25px;}
+.login-box .login-main .base-input{dsiplay:block;width:380px;height:42px;line-height:42px;font-size:18px;}
+.login-box .login-main .common-btn{width:216px;height:55px;line-height:55px;font-size:18px;margin:5px auto;}
+.login-box .login-main .base-error,.login-box .login-main .base-right{line-height:20px;margin:0;}
+.login-box .login-main .error-icon,.login-box .login-main .right-icon{margin:0;}
+.free-reg-btn{width:116px;height:34px;line-height:34px;font-size:14px;color:#fff;background:#70c0ff;text-align:center;}
+.login-box .layout440{width:440px}
+/***************************version3.0 2015/6/14************************************/
+.logBox{ width:100%; background:#E4F2FB;background:url(../images/logbanner.jpg) center no-repeat;margin:0 auto;height:467px;}
+.loglay{width:1200px;height:467px; margin:0 auto;}
+.logFram{position:absolute;top:50%;margin-top:-170px; right:140px;width:300px;background:#fff;padding:0px 20px 25px 20px;}
+.logFram h3{height:58px; line-height:58px; border-bottom:1px solid #bbb;padding-left:20px;}
+.logItem{padding:15px 20px 0 20px;}
+.userPut{border:1px solid #dad9d9;height:20px; background:url(../images/loginIcon.png) no-repeat 10px 10px;padding:10px 0 10px 60px;width:198px;}
+.pwdPut{border:1px solid #dad9d9;height:20px; background:url(../images/loginIcon.png) no-repeat 15px -60px;padding:10px 0 10px 60px;width:198px; margin-top:-1px;}
+*+html ..pwdPut{margin-top:-3px;}
+.userPut:focus{border:1px solid #ff8600;outline:none;box-shadow: 0 0 4px #ff8600;background:url(../images/loginIcon.png) no-repeat 10px -140px;z-index:10000; position:relative;}
+.pwdPut:focus{border:1px solid #ff8600;outline:none;box-shadow: 0 0 4px #ff8600;background:url(../images/loginIcon.png) no-repeat 15px -210px;}
+.logbtn{ display:block; height:55px; line-height:55px;width:100%; font-size:18px;}
+.loginFoot{padding:40px 0 10px 0;background:#fff;color:#636363;}
+/**********************************version3.0 2015/7/9**********************************************************/
+.logTip{color:#ff340e;border:1px solid #fac8c8; background:#fff1f1 url(../images/loginIcon.png) no-repeat 10px -296px;padding:0 20px 0 35px; border-radius:3px; height:31px; line-height:31px; display:block;font-size:14px; display:none;}

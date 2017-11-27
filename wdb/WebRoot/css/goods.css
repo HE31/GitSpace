@@ -1,0 +1,324 @@
+li{list-style-type: none;}
+.goods-category{padding:3px 10px;width:1180px;background:#fff;margin-top:10px; font-size:14px;}
+.goods-category .cate-word{display:block;color:#494949;color:#222;padding:5px 0;}
+.goods-category .cate-main{width:1070px; border-bottom:1px dashed #D1CCC7;padding-bottom:10px;}
+.goods-category .cate-main .cate-a{text-decoration:none;float:left;color:#5ca8fd;display:block;padding:1px 3px;margin:3px 7px 5px 10px;}
+.goods-category .cate-main .cate-a.current,.goods-category .cate-main .cate-a:hover{background:#5ca8fd;color:#FFFFFF;}
+.goods-category ul li{padding:10px 0 0 0;}
+.goods-category .cate-main.last{border-bottom:none;}
+.goods-sort-box{margin-top:40px;}
+.goods-sort-box ul{background:url(../images/goods/sort-bg.png) repeat-x;border:1px #E2E2E2 solid;border-right:none;height:27px;line-height:27px;}
+.goods-sort-box ul li{float:left;border-right:1px #E2E2E2 solid;padding:0 12px;}
+.goods-sort-box ul li a{display:block;text-decoration:none;}
+.goods-sort-box ul li.current,.goods-sort-box ul li:hover{background:#fff;}
+.goods-list{width:1200px;margin-top:30px;}
+.goods-list h3{font-size:14px;color:#626160;font-weight:bold;}
+.goods-list .goods{float:left;margin:0 0 12px 12px;width:571px;height:168px;background:#fff;padding:10px;border:1px solid #fff;}
+.goods-list .goods:hover{border:1px solid #f7661f;}
+.goods-list .goods.first{margin-left:0;}
+.goods-list .goods .goods-a-box{display:block;width:100%;height:100%;text-decoration:none;}
+.goods-list .goods .goods-pic-box{width:215px;height:165px;overflow:hidden;text-align:center;position:relative;}
+.goods-list .goods .goods-pic-box img{max-width:215px;max-height:165px;text-align:center;_width:165px;_width:165px;}
+.goods-list .goods-info-box{width:300px;margin-bottom:20px;}
+.goods-list .goods-info-box .amount-box{width:296px;height:45px;line-height:45px;background:url(../images/goods/amount-bg.png) no-repeat;color:#929292;}
+.goods-list .goods-info-box .amount-box .first-amount{width:140px;text-align:center;}
+.goods-list .goods-info-box .amount-box .second-amount{width:156px;text-align:center;}
+.goods-list .goods-info-box .amount-box .first-amount .first-pay{color:#e93c6a;font-size:22px;}
+.goods-list .goods-info-box .amount-box .second-amount .second-pay{color:#95bf31;font-size:22px;}
+.goods-list .goods-info-box .goods-go-btn{display:block;height:30px;line-height:30px;width:100px;text-align:center;color:#fff;background:#f7661f;margin-left:195px;font-size:14px;}
+.goods-detail-box .goods-info-box .common-btn{width:216px;height:55px;line-height:55px;font-size:18px;}
+.goods-detail-box .goods-nav a{color:#909090;}
+.goods-detail-box .goods-info-box{background:#fff;border:1px #fff solid;padding:30px;}
+.goods-detail-box .goods-info-box .goods-pic-box{ display: table-cell; vertical-align:middle; *display: block;
+ *font-size: 393px; *font-family:Arial; width:450px;margin-right:35px;text-align:center;position:relative; border:1px solid #ececec;padding-top:30px;padding-bottom:30px;padding-left:5px;padding-right:5px;}
+ 
+.goods-detail-box .goods-info-box .goods-pic-box .goods-big-pic{max-width:450px;max-height:450px;}
+
+.goods-detail-box .goods-info-box .goods-right{width:650px;}
+.goods-detail-box .goods-info-box .goods-right h1{font-size:18px;padding-bottom:15px;border-bottom:1px dashed #ddd;margin-bottom:10px;}
+.goods-detail-box .goods-info-box .base-select-outer{height:42px;line-height:42px;}
+.goods-detail-box .goods-info-box .base-select-outer .base-select-ul{top:42px;width:100px;}
+.goods-attr-unit label{display:block;width:73px;text-align:left;margin-right:10px;height:30px;line-height:30px;}
+.goods-attr-unit{font-size:14px;height:30px;line-height:30px;padding:9px 0;}
+.goods-attr-unit .attr-box{display:block;padding:0 18px;height:30px;line-height:30px;border:1px solid #ddd;margin-right:10px;cursor:pointer;margin-bottom: 10px;}
+.goods-attr-unit .attr-box.checked{border:1px solid #ff6600;background:url(../images/goods/choosed.png) no-repeat right bottom;}
+.goods-attr-unit .attr-box.first{margin-left:0;}
+.go-buy-btn{margin-top:30px;width:200px;color:#fff;background:#47AFEF;text-align:center;font-size:22px;padding:10px 0;}
+.goods-des-box{min-height:200px;background:#fff;}
+.goods-des-box .goods-detail-hd{background: #f6f6f6; height: 44px; line-height: 44px; border-top: 1px solid #e2e2e2; width: 100%}
+.goods-des-box img{display:block;margin:0 auto!important;}
+.goods-des-box .nav-bar{height:42px;background:#fff!important;}
+.goods-des-box iframe{border:none;margin:20px auto;width:500px;height:300px   }
+.goods-des-box .goods-detail-hd p{line-height:44px; border-top:1px solid #47AFEF; margin-top:-1px; width: 98px; text-align: center; background: #fff;}
+.nav_bar_list{height:41px;}
+.nav_bar_list li{float:left;width:140px;height:42px;}
+.nav_bar_list li a{color:#666;text-align:center;display:block;height:20px;line-height:20px;margin-right:-1px;_margin-right:0;font-size:14px;margin-top:12px;}
+.nav_bar_list li.current{background-color:#fff;border-top:3px solid #47AFEF;height:39px;}
+.nav_bar_list li.current a{color:#47AFEF;}
+.goods-detail-show{display:none;padding:20px 10px;}
+.common-icon.zero-icon{background-position: -350px 0;width: 87px;height: 87px;}
+.common-icon.half-icon{background-position: -985px -275px;width: 77px;height: 72px;}
+.common-icon.yhj2-icon{background-position: -1063px -275px;width: 77px;height: 72px;}
+.common-icon.half12-icon{background-position: -1236px -275px;width: 77px;height: 72px;}
+.common-icon.zero-icon-small{background-position: -437px 0;width: 58px;height: 56px;}
+.common-icon.half-icon-small{background-position: -1187px -275px;width: 46px;height: 45px;}
+.common-icon.yhj2-icon-small{background-position: -1141px -275px;width: 46px;height: 45px;}
+.common-icon.half12-icon-small{background-position: -1315px -275px;width: 46px;height: 45px;}
+.goods-list .goods .goods-pic-box .zero-icon-small{position:absolute;top:0;left:0}
+.goods-list .goods .goods-pic-box .half-icon-small{position:absolute;top:0;right:0}
+.goods-list .goods .goods-pic-box .yhj2-icon-small{position:absolute;top:0;right:0}
+.goods-list .goods .goods-pic-box .half12-icon-small{position:absolute;top:0;right:0}
+.goods-detail-box .goods-info-box .goods-pic-box .zero-icon{position:absolute;top:0;left:0;}
+.goods-detail-box .goods-info-box .goods-pic-box .half-icon{position:absolute;top:0;right:30px;}
+.goods-detail-box .goods-info-box .goods-pic-box .yhj2-icon{position:absolute;top:0;right:30px;}
+.goods-detail-box .goods-info-box .goods-pic-box .half12-icon{position:absolute;top:0;right:30px;}
+.topCarSchoolBanner{height:345px;background:url(http://teststatic.aixuedai.com/images/goods/carSchoolBanner.png) no-repeat top center;}
+.howDo{height:380px;background:url(http://teststatic.aixuedai.com/images/goods/howDo.png) no-repeat top center;}
+.s-box,.c-box,.p-box{left:180px;position:absolute;width: 272px;font-size: 16px;overflow-y: scroll; max-height:217px; display: none}
+.p-box{top:159px;}
+.c-box{top:213px;}
+.s-box{top:267px;}
+.s-box li,.c-box li,.p-box li{line-height: 42px;padding-left: 10px;border: 1px solid #dad9d9;-webkit-transition: box-shadow 0.30s ease-in-out; border-top: 0px; background-color: #FFF;cursor:pointer;}
+.s-box li:hover,.c-box li:hover,.p-box li:hover{ border: 1px solid #47AFEF;cursor:pointer;}
+#J_BookDialog{ width:535px;position:relative;}
+#J_BookDialog .unit label{ margin-left: 50px;width:100px}
+.cityList,.schoolList{display: none}
+.hotShow{background-color:#fff }
+/****************2015/6/10--caodan***************/
+.wid68{width:68px;}
+.listLeft{width:220px; float:left;display:inline; }
+.leftPart1{width:200px; padding:10px;  background:#fff url(../images/loading_30.gif) no-repeat center;}
+.leftPart1 a:last-child{border-bottom:none }
+.listRight{width:970px;float:left; display:inline;position:relative;}
+.pb20{padding-bottom:20px;}
+.proItem{height:50px; background:#fff; line-height:50px; font-weight:normal;font-size:14px; border-bottom:1px solid #ececec;}
+.proItem a{display:inline-block; width:90px; text-align:center;}
+.proItem a.itemon{color:#47AFEF; }
+.proItem i{width:10px; height:9px; display:inline-block;}
+.proItem i.upicon{background:url(../images/goods/point.png) no-repeat -90px center;}
+.proItem i.downicon{ background:url(../images/goods/point.png) no-repeat 3px center;}
+.proItem i.downiconColor{background:url(../images/goods/pointed.png) no-repeat 3px center}
+.proItem i.upiconColor{background:url(../images/goods/pointed.png) no-repeat -90px center}
+.floor .goodsList .wid242{width:235px; padding:15px 0 15px 5px;}
+.floor .goodsList .showcase .goodsDesc {
+    color: #434343;
+    line-height:30px;
+    height:30px; 
+    padding:0 20px;
+}
+.pro3 .goodsList{width:auto;height:auto;}
+.pro3-pages{ text-align:center; height:30px; line-height:30px;padding:30px 0;}
+.pro3-pages a,.pro3-pages span{font-size:14px; display:inline-block;padding:0 10px;margin:0 10px;}
+.pro3-pages a{ cursor:pointer;}
+.pro3-pages a.pageOn{background:#47AFEF; color:#fff;}
+.goods-category .wid880{width:870px;}
+.goods-category .wid760{width:760px;}
+.goods-attrs .J_load{color:#999;line-height:48px;padding-left:83px;   }
+.widauto{width:auto;}
+.listpic-pre,.listpic-next{display:inline-block;width:30px; height:70px;}
+.listpic-pre{ background:url(../images/goods/axd3_bg.png) no-repeat 0px 20px;}
+.listpic-next{ background:url(../images/goods/axd3_bg.png) no-repeat -120px 20px;}
+.listpic{margin:0;padding:0;display:inline-block;white-space:nowrap;*display:inline;*zoom:1;}
+.listpic li{float:left;width:68px;height:68px;border:2px solid #ececec;margin-right:10px;display:inline-block;vertical-align:top;*display:inline;zoom:1;}
+.listpic li.light{width:68px;height:68px;border:2px solid #47AFEF;overflow:hidden; }
+.listpic li img{width:100%;}
+.bestGoods{width:260px;padding:5px 20px;line-height: 25px;}
+.iconlist{ border-top:1px solid #ececec; padding:15px 0 0 5px;}
+.iconlist span{display:inline-block; padding:0 0 0 42px; height:35px;line-height:35px; color:#666; margin-right:20px;font-size:14px;}
+.iconlist .sp1{background:url(../images/axd3_bg.png) no-repeat 0 -126px;}
+.iconlist .sp2{background:url(../images/axd3_bg.png) no-repeat 0 -180px;}
+.iconlist .sp3{background:url(../images/axd3_bg.png) no-repeat 0 -234px;}
+.iconlist .sp4{background:url(../images/axd3_bg.png) no-repeat 0 -289px;}
+.calculator{ background:#f8fafc url(../images/axd3_bg.png) no-repeat 0 -351px; border:1px solid #d2d1d1; border-radius:3px;-moz-border-radius:3px; -ms-border-radius:3px; padding:10px 10px 10px 25px;}
+.tipcont{display:block; color:#666;background:#fffff5; border:1px solid #ececec;font-size:12px; line-height:19px;padding:8px; width:320px; border-radius:3px;}
+.decbox{ position:absolute; bottom:47px; right:0px; z-index:10; display:none;}
+.parent,.firstPay,.months{ position:relative;}
+.hstate{opacity: 0.8;filter:Alpha(opacity=80);}
+.hstate:hover{opacity:1;filter:Alpha(opacity=100);}
+.decbox i{background:url(../images/pinktip.png) no-repeat 0 0;width:10px; height:7px; display:inline-block; position:absolute;bottom:-6px; left:50px; z-index:11;}
+.what{height:35px; display:inline-block; padding-top:20px;}
+.xindec i{background:url(../images/pinkicon2.png) no-repeat 0 0;width:10px; height:7px; display:inline-block; position:absolute;top:-6px; left:50px; z-index:11;}
+.xindec{ position:absolute; left:80px; top:42px; z-index:10; display:none;}
+.wid1200{width:1200px;}
+label.h42{height:42px; line-height:42px;display: block;margin-right: 10px;text-align: left; width: 73px;}
+.payitem{width:290px; background:#fff; position:absolute;left:-80px;top:50px;}
+.payitem i{position:absolute; left:120px; top:-4px; background:url(../images/firstpay-up.png) no-repeat 0 0;width:11px; height:5px; display:inline-block;}
+.payitem ul{margin:0;padding:0 0 8px 0;border:1px solid #d7d7d7;}
+.payitem ul li{width:50px; text-align:center; font-size:12px; float:left;display:inline;padding:8px 3px 0px 3px; line-height:19px;}
+.firstPay,.months{ cursor:pointer;}
+.pay1,.pay2,#calDialog,#setPass,#addrItem{display:none;}
+.pay2{width:455px;left:-160px;}
+.pay2 i{left:200px;}
+.pay2 ul li{padding:5px 3px 0px 3px;}
+.floor .goodsList .wid294{width:299px;height:325px;}
+.imgcent img,.imgcent{ text-align:center;}
+.imgcent .goodsDesc{text-align:left;}
+
+/*------by 547--------*/
+.noResult{position:absolute;left:50%;margin-left: -103px;top:250px;}
+.list-items{width:390px;overflow:hidden;margin-right:8px;}
+.whauto{width:auto!important;height:auto!important}
+.bestGoodsName{color:#434343;text-align: left;}
+.cc63{color:#636363;}
+.goodListName{height:38px;}
+
+/*------share--------*/
+.share_box{position: relative; width:54px}
+a.share-btn{display: inline-block;background:url(../images/goods/share.png) no-repeat 0 0; height: 20px; line-height: 20px; padding-left: 22px;}
+.share_holder{padding-top:8px;position: absolute; left:0; top:20px;}
+.share_arrow, .share_arrow_inner {position: absolute; border-color: transparent; border-style: solid; border-width: 6px;
+	height: 0;width: 0;}
+.share_arrow{border-bottom-color: #ececec; margin-left:30px; margin-top: -11px;}
+.share_arrow_inner { margin-top: -5px; margin-left: -6px; border-bottom-color: #fffff5;}
+/* Webkit Hacks  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.share_content {
+		padding:  6px;
+		background-color: #fffff5;
+	}
+	.share_arrow_inner {
+		border-bottom-color: #fffff5;
+	}
+	.share_arrow_inner {
+		border-top-color: #fffff5;
+	}
+}
+ .share_holder .share_content{border: 1px solid #ececec; padding: 6px; background: #fff; width:100px}
+ 
+ 
+ 
+/*  商品详情选择框 */
+/* Prevent text and blocks selection */
+input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
+input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
+
+/* Hide original checkboxes. They are ugly! */
+input.labelauty { display: none !important; }
+
+/*
+ * Let's style the input
+ * Feel free to work with it as you wish!
+ */
+input.labelauty + label
+{
+	display: table;
+	font-size: 11px;
+	padding: 10px;
+	background-color: #efefef;
+	color: #443D3D;
+	cursor: pointer;
+
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+
+
+	transition: background-color 0.25s;
+	-moz-transition: background-color 0.25s;
+	-webkit-transition: background-color 0.25s;
+	-o-transition: background-color 0.25s;
+
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
+/* Stylish text inside label */
+
+input.labelauty + label > span.labelauty-unchecked,
+input.labelauty + label > span.labelauty-checked
+{
+	display: inline-block;
+	line-height: 16px;
+	vertical-align: bottom;
+}
+
+/* Stylish icons inside label */
+
+input.labelauty + label > span.labelauty-unchecked-image,
+input.labelauty + label > span.labelauty-checked-image
+{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: bottom;
+	background-repeat: no-repeat;
+	background-position: left center;
+
+	transition: background-image 0.5s linear;
+	-moz-transition: background-image 0.5s linear;
+	-webkit-transition: background-image 0.5s linear;
+	-o-transition: background-image 0.5s linear;
+}
+
+/* When there's a label, add a little margin to the left */
+input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+{
+	margin-left: 7px;
+}
+
+/* When not Checked */
+input.labelauty:not(:checked):not([disabled]) + label:hover
+{
+	background-color: #eaeaea;
+	color: #a7a7a7;
+}
+input.labelauty:not(:checked) + label > span.labelauty-checked-image
+{
+	display: none;
+}
+
+input.labelauty:not(:checked) + label > span.labelauty-checked
+{
+	display: none;
+}
+
+/* When Checked */
+input.labelauty:checked + label
+{
+	background-color: #3498db;
+	color: #ffffff;
+}
+
+input.labelauty:checked:not([disabled]) + label:hover
+{
+	background-color: #72c5fd;
+}
+input.labelauty:checked + label > span.labelauty-unchecked-image
+{
+	display: none;
+}
+
+input.labelauty:checked + label > span.labelauty-unchecked
+{
+	display: none;
+}
+
+input.labelauty:checked + label > span.labelauty-checked
+{
+	display: inline-block;
+}
+
+input.labelauty.no-label:checked + label > span.labelauty-checked
+{
+	display: block;
+}
+
+/* When Disabled */
+input.labelauty[disabled] + label
+{
+	opacity: 0.5;
+}
+
+/* Add a background to (un)checked images */
+input.labelauty + label > span.labelauty-unchecked-image
+{
+	background-image: url( ../images/input-unchecked.png );
+}
+
+input.labelauty + label > span.labelauty-checked-image
+{
+	background-image: url( ../images/input-checked.png );
+}

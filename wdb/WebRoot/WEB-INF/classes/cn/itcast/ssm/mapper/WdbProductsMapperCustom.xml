@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.WdbProductsMapperCustom" >
+
+   <!-- 定义商品查询的sql片段，就是商品查询条件 -->
+   <sql id="query_products_where">
+   	<!-- 使用动态sql，通过if判断，满足条件进行sql拼接 -->
+   	<!-- 商品查询条件通过ItemsQueryVo包装对象 中itemsCustom属性传递 -->
+   		<if test="wdbProductsCustom!=null">
+   			<if test="wdbProductsCustom.productname!=null and wdbProductsCustom.productname!=''">
+   				wdbProducts.productName LIKE '%${wdbProductsCustom.productname}%'
+   			</if>
+   		</if>
+	
+   </sql>
+   
+   
+   
+  	
+  	<!-- 商品列表查询 -->
+  	<!-- parameterType传入包装对象(包装了查询条件)
+  		resultType建议使用扩展对象
+  	 -->
+  	<select id="findProductsList" parameterType="cn.itcast.ssm.po.WdbProductsQueryVo"
+  		 resultType="cn.itcast.ssm.po.WdbProductsCustom">
+  		SELECT * FROM wdb_products  JOIN wdb_categories USING(CategoryId) where  FunctionId=1 
+  		<!-- <where>
+  			<include refid="query_products_where"></include>
+  		</where> -->
+  		
+  		
+  	</select>
+  	
+  	<select id="findProductsListPage" parameterType="cn.itcast.ssm.po.WdbProductsQueryVo"
+  		 resultType="cn.itcast.ssm.po.WdbProductsCustom">
+  		<!-- SELECT * FROM wdb_products  limit #{param2},#{param3}  -->
+  	SELECT * FROM wdb_products JOIN wdb_categories USING(CategoryId) where  FunctionId=1 limit #{param2},#{param3}
+  		<!-- (#{page}-1)*#{rows},#{page}*#{rows} -->
+  	</select>
+  	
+  	<select id="findProductsType" parameterType="cn.itcast.ssm.po.WdbProductsQueryVo"
+  		 resultType="cn.itcast.ssm.po.WdbProductsCustom">
+  		SELECT * FROM wdb_products  where categoryid=#{categoryid}
+  	</select>  	
+  	
+  	<select id="findProductsListByDetail" parameterType="cn.itcast.ssm.po.WdbProductsQueryVo"
+  		 resultType="cn.itcast.ssm.po.WdbProductsCustom">
+  		SELECT * FROM wdb_products  where ProductDescription LIKE'%${detail}%'
+  	</select>  	
+  	
+  	<select id="findProductsBySearchKey" parameterType="cn.itcast.ssm.po.WdbProductsQueryVo"
+  		 resultType="cn.itcast.ssm.po.WdbProductsCustom">  		
+   				SELECT * FROM wdb_products JOIN wdb_categories USING(CategoryId) where  FunctionId=1 and ProductDescription LIKE'%${searchkey}%'or ProductName LIKE '%${searchkey}%'
+  	</select>  	
+  	
+  	<select id="findTravelList" parameterType="cn.itcast.ssm.po.WdbProductsQueryVo"
+  		 resultType="cn.itcast.ssm.po.WdbProductsCustom">
+  		SELECT * FROM wdb_products  JOIN wdb_categories USING(CategoryId) where  FunctionId=3
+  		<!-- <where>
+  			<include refid="query_products_where"></include>
+  		</where> -->
+  		
+  		
+  	</select>
+  		
+</mapper>

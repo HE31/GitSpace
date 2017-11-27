@@ -1,0 +1,216 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.tm-zhezhao{background-color: rgba(0, 0, 0, 0.4); filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);}
+.wrap{overflow:hidden;min-width:1200px;}
+.tm-top{overflow:hidden;zoom:1;}
+.tm-banner-list li .time{ position:absolute;right:20px;bottom:30px;line-height:37px;height:37px; color:#fff;font-size:22px;font-weight:bold;font-family:"΢���ź�";}
+.tm-banner-list li .time .day,.tm-banner-list li .time .hour,.tm-banner-list li .time .min,.tm-banner-list li .time .sec{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/bg.png) no-repeat;display:inline-block;width:37px;font-size:26px;height:37px; text-align:center;font-family:"Arial";font-weight:bold;color:#333;}
+.tm-banner-list li .time .t-size12{font-size:12px;font-family:"����";line-height:37px;margin:0 3px; position:relative;top:-3px;font-weight:normal;}
+
+.tm-banner-list li h4{ position:absolute;height:22px;line-height:22px;right:20px;top:40px;width:300px; text-align:right;color:#fff;font-family:"΢���ź�";font-size:18px;overflow:hidden;}
+.tm-banner-list li h4 span{margin:0 5px;}
+.tm-banner-list li h3{ position:absolute;height:40px;line-height:40px;right:20px;top:80px;width:360px;font-weight:bold;text-align:right;color:#fff;font-family:"΢���ź�";font-size:38px;overflow:hidden;}
+.tm-banner-list li p{ position:absolute;height:50px;line-height:46px;overflow:hidden;top:130px;right:20px; text-align:right;width:400px;color:#ff9900;font-family:"΢���ź�";font-size:20px;font-weight:bold;}
+.tm-banner-list li p b{font-size:48px;}
+.tm-banner-list li p em{color:#fff;font-size:18px;font-family:"Arial";margin-left:5px; text-decoration:line-through;}
+
+.tm-bannerMod{width:945px;overflow:hidden;float:left;zoom:1;}
+.tm-r-Mod{width:240px;overflow:hidden;float:right;}
+.tm-r-M-pic{width:240px;height:160px;overflow:hidden; position:relative;}
+.tm-r-M-content{width:238px;height:100px;border:1px solid #DBDBDB;margin-top:-1px;overflow:hidden; background:#fff;}
+.tm-r-M-content h3{margin:0 10px;height:20px;line-height:20px;margin-top:10px}
+.tm-r-M-content h3 a{font-family:"΢���ź�";font-size:16px;color:#333;}
+.tm-r-M-content h3 a:hover{color:#f60}
+.tm-r-M-content h4{margin:0 10px;height:20px;line-height:20px;color:#999;margin-top:5px}
+.tm-r-M-content p{padding:8px 10px;height:24px;overflow:hidden;background:#FAFAFA;margin-top:5px;}
+.tm-r-M-content p span{display:inline-block;float:left;line-height:24px;font-size:20px;font-family:"Arial";color:#f60;}
+.tm-r-M-content p span i{font-family:"΢���ź�";font-size:14px;}
+.tm-r-M-content p em{display:inline-block;float:left;line-height:30px;color:#ccc;text-decoration:line-through;margin-left:5px;}
+a.tm-qg-Btn{float:right;width:76px;height:24px;background:#f80;border-radius:2px; text-align:center;color:#fff !important;line-height:24px;}
+a.tm-qg-Btn:hover{background:#47AFEF;color:#fff !important; text-decoration:none;}
+.tm-tab-list{width:198px;border-left:1px solid #DBDBDB;float:left;border-bottom:1px solid #DBDBDB;border-top:1px solid #DBDBDB;height:259px;background:#f6f6f6}
+.tm-tab-list li{width:198px;border-top:1px solid #DBDBDB;height:64px;color:#F6F6F6; position:relative; cursor:pointer;background:#F6F6F6;margin-top:-1px;}
+.tm-tab-list li span{ position:absolute;display:block;top:10px;padding:0 20px;overflow:hidden;height:22px;color:#666;font-size:16px;font-family:"΢���ź�";}
+.tm-tab-list li em{display:block; position:absolute;top:35px;padding:0 20px;overflow:hidden;height:20px;color:#999;}
+.tm-tab-list li i{ position:absolute;right:-24px;top:20px;display:none;z-index:9;border:12px solid #000; border-color:transparent transparent transparent #fff;}
+.tm-tab-list li p{height:64px;width:3px;background:#DD3377; position:absolute;left:-1px;top:0;display:none;}
+.tm-tab-list .tm-tab_hover p{display:block;}
+.tm-tab-list .tm-tab-topLi{height:66px;}
+.tm-tab-list .tm-tab-topLi p{height:66px;}
+.tm-tab-list .tm-tab_hover{background:#fff;}
+.tm-tab-list .tm-tab_hover span{color:#d37;}
+.tm-tab-list .tm-tab_hover em{color:#666;}
+.tm-tab-list .tm-tab_hover i{display:block;}
+.tm-banner-list-Box{width:746px;height:260px;float:right;overflow:hidden; position:relative;}
+.tm-banner-list-tab{width:148px;height:6px; position:absolute;bottom:20px;left:50%;margin-left:-72px;}
+.tm-banner-list-tab li{width:32px;height:6px;float:left;background:#BABABA;overflow:hidden;margin-left:5px; cursor:pointer;}
+.tm-banner-list-Box .tm-banner-list-tab .tm-banner-list-tabN{background:#DF1078}
+.tm-banner-list{width:746px;height:260px;overflow:hidden;}
+.tm-banner-list li{width:746px;height:260px;overflow:hidden; position:relative;background:url(http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif) no-repeat center center; cursor:pointer;}
+.tm-hot-event,.tm-qx-event{overflow:hidden;zoom:1;}
+.tm-hot-event h3,.tm-qx-event h3,.tm-more-event h3{font-family:"΢���ź�";font-size:22px;line-height:30px;}
+.tm-hot-event-l{width:435px;height:340px;float:left;overflow:hidden;background:url(http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif) no-repeat center center;}
+.tm-hot-event-r{float:left;width:765px;height:340px;}
+.tm-hot-event-cpList{width:765px;height:225px;}
+.tm-hot-event-cpList li{width:240px;height:225px;overflow:hidden;float:left;margin:0 0 0 15px;background:url(http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif) no-repeat center center;}
+.hot-event-cpPicBox{width:240px;height:160px;overflow:hidden; position:relative;}
+.hot-event-cpTips,.tm-r-cpTips{width:70px;height:52px;display:block;overflow:hidden; position:absolute;left:0;top:0;}
+.hot-event-cpTips span,.tm-r-cpTips span{display:block;width:70px;height:32px; text-align:center;line-height:32px;color:#fff;}
+.hot-event-cpTips span i,.tm-r-cpTips span i{font-family:"Arial";font-size:20px;margin-right:3px;position: relative;top: 2px;}
+.hot-event-cpTips em,.tm-r-cpTips em{display:block;width:70px; text-align:center;line-height:20px;height:20px;background:#000;color:#ff9900;}
+.hot-event-cpTimeDown{position:absolute;left:0;bottom:-1px;width:240px;height:69px;background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/tm-zhaobg.png) no-repeat;}
+.tm-clock{float:right;background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/clock.png) no-repeat;width:14px;height:14px;margin:43px 5px 0 0;}
+.hot-event-cpTimeDown span{float:right;height:20px;line-height:20px;color:#fff;margin:42px 10px 0 0;}
+.hot-event-cpNrBox{width:238px;height:64px;border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;overflow:hidden; background:#fff;}
+.tm-hot-event-cpList li h4{width:220px;height:20px;margin:10px 10px 0 10px;overflow:hidden;}
+.tm-hot-event-cpList li h4 a{font-size:14px;font-family:"΢���ź�";color:#333;}
+.tm-hot-event-cpList li h4 a:hover{color:#f60}
+.tm-hot-event-priceBox{width:220px;height:30px;padding:0 10px;background:#FAFAFA;line-height:30px;margin-top:4px;}
+.tm-hot-event-priceBox span{float:left;font-size:14px;color:#47AFEF;}
+.tm-hot-event-priceBox span em{font-size:20px;font-family:"Arial";margin-left:5px;}
+.tm-hot-event-priceBox i{ text-decoration:line-through;float:left;color:#ccc;margin-left:5px;line-height:36px;}
+.tm-hot-evetn-ad{width:765px;height:100px;margin-top:15px;}
+.tm-hot-evetn-ad li{width:240px;height:100px;margin:0 0 0 15px;float:left;overflow:hidden;background:url(http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif) no-repeat center center;}
+.tm-qx-Box{overflow:hidden;zoom:1;}
+.tm-qx-leftBox{width:900px;height:auto;overflow:hidden;float:left;}
+.tm-qx-zbyBox{width:900px;height:auto;overflow:hidden;}
+.tm-qx-cpList{width:900px;height:auto;overflow:hidden; position:relative;}
+.tm-qx-cpList li{width:900px;height:218px;overflow:hidden;margin-top:15px; position:relative; background:#fff}
+.tm-qx-picBox{float:left;width:435px;height:218px;overflow:hidden; position:relative;background:url(http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif) no-repeat center center;}
+.tm-qx-tipsBox{ position:absolute;left:0;top:0;width:69px;height:71px;}
+.tm-zb-Tips{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/zbyTips.png) no-repeat;}
+.tm-mp-Tips{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/mpTips.png) no-repeat;}
+.tm-gny-Tips{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/gnyTips.png) no-repeat;}
+.tm-cjy-Tips{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/cjyTips.png) no-repeat;}
+.tm-yl-Tips{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/ylTips.png) no-repeat;}
+
+.tm-zb-Tips-on{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/zbyTips_on.png) no-repeat;}
+.tm-mp-Tips-on{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/mpTips_on.png) no-repeat;}
+.tm-gny-Tips-on{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/gnyTips_on.png) no-repeat;}
+.tm-cjy-Tips-on{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/cjyTips_on.png) no-repeat;}
+.tm-yl-Tips-on{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/ylTips_on.png) no-repeat;}
+
+.tm-zb-Tips-on em,.tm-mp-Tips-on em,.tm-gny-Tips-on em,.tm-cjy-Tips-on em,.tm-yl-Tips-on em{ color:#f90 !important;}
+
+.tm-qx-tipsBox span{display:block;height:20px;line-height:20px;overflow:hidden;color:#fff; text-align:center;}
+.tm-qx-tipsBox em{display:block;height:32px;line-height:34px;overflow:hidden;color:#fff; text-align:center;}
+.tm-qx-tipsBox em i{font-family:"Arial";font-size:20px;margin-right:3px;position: relative;top: 2px;}
+.tm-qx-tipsBox dfn{display:block;height:20px;color:#ff9900; text-align:center;}
+.tm-qx-nrBox{width:464px;height:216px;border-top:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;float:left;overflow:hidden;}
+.tm-qx-nrBox h4{width:424px;margin:0 auto;height:20px;margin-top:20px;overflow:hidden;line-height:20px;}
+.tm-qx-nrBox h4 a{font-size:18px;font-family:"΢���ź�";color:#333;}
+.tm-qx-nrBox h4 a:hover{color:#47AFEF}
+.tm-qx-jjBox{width:424px;height:20px;line-height:20px;overflow:hidden;margin:10px 20px;white-space: nowrap;text-overflow: ellipsis;}
+.tm-qx-jjBox span{color:#999;height:20px;overflow:hidden;}
+.tm-qx-jjBox span i{margin:0 5px;color:#CCC}
+.tm-qx-jjBox em{color:#666;height:20px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.tm-qx-nrBox p{width:424px;height:20px;overflow:hidden;margin:0 auto;line-height:20px;color:#999}
+.tm-qx-nrBox p span{float:left; margin-right:10px;}
+.tm-qx-nrBox p em{float:left;max-width:344px;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.tm-qx-priceBox{width:424px;height:36px;overflow:hidden;margin:0 auto;margin-top:20px;}
+.tm-qx-priceBox span{line-height:36px;float:left;color:#47AFEF;font-size:16px;font-family:"΢���ź�";}
+.tm-qx-priceBox span em{font-size:28px;font-family:"Arial";font-weight:bold;}
+.tm-qx-priceBox span i{font-size:12px;color:#999;margin:0 3px 0 0;font-family:"����";}
+.tm-qx-priceBox dfn{color:#ccc; text-decoration:line-through;float:left;height:20px;line-height:20px;margin:15px 0 0 5px}
+.tm-qx-ljqgBtn{background:url(../images/group_travel/tm_ljqgBtnH.png) no-repeat;width:112px;height:36px;float:right;}
+.tm-qx-ljqgBtn:hover{background:url(../images/group_travel/tm_ljqgBtnH.png) no-repeat;}
+.tm-qx-trainBtn{background:url(../images/train/tm_ljqgBtnH.png) no-repeat;width:112px;height:36px;float:right;}
+.tm-qx-trainBtn:hover{background:url(../images/train/tm_ljqgBtnH.png) no-repeat;}
+.tm-qx-ljqgBtn-dis{background:#ddd;width:112px;height:36px; color:#999 !important; text-align:center; line-height:36px; font-family:microsoft yahei; font-size:16px; border-radius:2px; cursor:default; float:right}
+.tm-qx-ljqgBtn-dis:hover{ text-decoration:none;}
+.tm-qx-timeDown{ position:absolute;right:1px;bottom:1px;height:26px;width:464px;background:#FAFAFA;overflow:hidden;}
+.tm-qx-timeDown span{float:left;height:26px;line-height:26px;color:#999;margin-left:5px;}
+.tm-qx-timeDown .tm-clock{float:left;margin:5px 0 0 20px;background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/clock2.png) no-repeat;width:16px;height:16px;}
+.tm-qx-timeDown p{float:right;margin-right:20px;width:auto;line-height:26px;color:#999; text-align:right;}
+.tm-qx-moreBox{width:900px;height:35px;overflow:hidden;margin-top:5px; position:relative;}
+.tm-qx-moreBox p{position:absolute;left:0;top:17px;width:900px;height:1px;background:#DDD;z-index:1}
+.tm-qx-moreBox a{display:block; position:relative;z-index:2;width:190px;height:35px;margin:0 auto;background:#fff;color:#999;font-size:14px;font-family:"΢���ź�"; line-height:35px;}
+.tm-qx-moreBox a span{float:left;margin-left:20px;}
+.tm-qx-moreBox a i{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/sanja.png) no-repeat;width:14px;height:8px;display:block;float:left;margin:15px 0 0 10px;}
+.tm-qx-moreBox a:hover{color:#47AFEF;}
+.tm-qx-moreBox a:hover span{ text-decoration:underline;}
+.tm-qx-moreBox a:hover i{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/sanjah.png) no-repeat;}
+.tm-mp-qxBox .tm-qx-moreBox a span,.tm-yl-qxBox .tm-qx-moreBox a span{margin-left:25px;}
+.tm-yl-qxBox .tm-qx-priceBox{margin-top:10px;}
+.tm-leftBox{width:900px;height:auto;float:left;}
+.tm-more-event{overflow:hidden;zoom:1;width:1200px;}
+.tm-more-list{width:1220px;height:190px;overflow:hidden;margin-left:-20px;}
+.tm-more-list li{width:285px;height:190px;float:left;margin-left:20px;background:url(http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif) no-repeat center center;}
+
+.tm-hot-event-l:hover,.tm-hot-event-cpList li:hover,.tm-hot-evetn-ad li:hover{
+transition:all 0.3s linear 0s;
+transform:translateY(-5px);
+-moz-transform:translateY(-5px);
+-webkit-transform:translateY(-5px);
+}
+
+.tm-qx-cpList li:hover{
+transition:all 0.3s linear 0s;
+transform:translateY(-5px);
+-moz-transform:translateY(-5px);
+-webkit-transform:translateY(-5px);
+-moz-box-shadow:2px 2px 1px 2px #f8f8f8; /* For Firefox3.6+ */ 
+-webkit-box-shadow:2px 2px 1px 2px #f8f8f8; /* For Chrome5+, Safari5+ */ 
+box-shadow:2px 2px 1px 2px #f8f8f8; /* For Latest Opera */ 
+}
+
+.tm-skBox{width:435px;height:218px; position:absolute;left:0;top:0;z-index:333;display:none;}
+
+.tm-skState .tm-skBox{display:block;background-color: rgba(255,255, 255, 0.3); filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);}
+.tm-skState .tm-qx-ljqgBtn{background:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/tm_ljqgBtnN.png) no-repeat;width:116px; cursor:default}
+.tm-qx-event-jsBox{width:1200px;overflow:hidden;height:auto !important; min-height:610px; position:relative;}
+.tm-rightJsBox{position: absolute;right:0px;width: 280px;height: auto;top: 15px;height: auto;}
+.tm-rightBox{width:278px;border:1px solid #ddd;overflow:hidden; position:absolute;top:0;z-index:1;}
+.tm-rightBox-nav{width:278px;overflow:hidden;}
+.tm-rightBox-nav li{width:278px;height:38px;border:1px solid #ddd;margin:-1px 0 0 -1px;background:#fbfbfb;overflow:hidden;}
+.tm-rightBox .tm-rightNav-li{height:379px;background:#fff;}
+.tm-rightBox-nav li:hover{background:#fff; cursor:pointer;}
+.tm-rightBox-nav li h4{height:38px;line-height:38px;width:253px;font-weight:bold;margin:0 auto;color:#999;font-size:16px;font-family:"΢���ź�";border-bottom:1px dashed #ddd;}
+.tm-rightBox .tm-rightNav-li h4,.tm-rightBox-nav li:hover h4{color:#333;}
+.tm-rightBox-nav li h4 i{width:14px;height:8px; background-image:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/icon1.png); background-position:-35px 0;float:right;margin-top:15px;}
+.tm-rightBox-nav li:hover h4 i{ background-position:-35px -28px;}
+.tm-rightBox .tm-rightNav-li h4 i{background-position:0 0;display:none;}
+.tm-rightBox .tm-rightNav-li:hover h4 i{background-position:0 -28px;display:none;}
+.tm-rightBox-nav li p{width:278px;height:auto;overflow:hidden;margin-top:10px;}
+.tm-rightBox-nav li p span{display:block;width:253px;height:20px;line-height:20px;color:#666;font-size:14px;font-family:"΢���ź�";margin:0 auto;font-weight:bold;margin-top:10px;}
+.tm-rightBox-nav li p a{float:left;width:56px;height:24px;line-height:24px;color:#666;font-size:12px;font-family:"����";background:#fff; text-align:center;margin:5px 0 0 11px;}
+.tm-rightBox .tm-rightNav-navA{color:#fff;background:#00B8FF; text-decoration:none;}
+.tm-rightBox-nav li p a:hover{border:1px solid #ff9900;background:#fff;color:#333;height:22px;width:54px;line-height:22px; text-decoration:none;}
+
+.tm-seach-Box{width:900px;height:22px;overflow:hidden;}
+.tm-seach-list{width:700px;height:22px;float:left;}
+.tm-seach-list li{padding:0 10px;line-height:22px;background:#fff;color:#666; text-align:center;float:left;margin-right:10px; cursor:pointer;}
+.tm-seach-Box .tm-seach-list .tm-seach-navLi{color:#fff;background:#ff9900;}
+.tm-seach-Box .tm-seach-list .tm-seach-navLi a{color:#fff !important;}
+.tm-return-index{float:right;height:22px;line-height:22px;color:#333;}
+.tm-return-index:hover{color:#47AFEF;}
+.tm-seach-list li i{width:7px;height:7px;float:right;background-image:url(http://pic.lvmama.com/img/v6/groupon/groupon_images/icon2.png);background-position:0 0;margin:7px 0 0 5px;}
+
+.tm-seach-Box .tm-seach-list li .tm-price-high{background-position:-14px 0;}
+.tm-seach-Box .tm-seach-list .tm-seach-navLi i{background-position:0 -10px;}
+.tm-seach-Box .tm-seach-list .tm-seach-navLi .tm-price-high{background-position:-14px -10px;}
+
+.tm-seach-list .xldgpx i{background-position:-14px 0;}
+.tm-seach-Box .tm-seach-list .tm-seach-navLi.xldgpx i{background-position:-14px -10px;}
+.tm-seach-list .jggdpx i{background-position:0 0;}
+.tm-seach-Box .tm-seach-list .tm-seach-navLi.jggdpx i{background-position:0 -10px;}
+
+.headBox,.footBox{height:200px;overflow:hidden;background:#B0D7B5;color:#fff;line-height:200px;font-size:50px;font-weight:bold; text-align:center;}
+/*����class*/
+.wordEllipsis{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+
+/*�Żݱ�ǩ*/ 
+.addtags{
+font-family: Arial,sans-serif;
+display: inline-block;
+height: 16px;
+line-height: 16px;
+font-weight: normal;
+padding: 0 3px;
+padding: 1px 3px 0\9;
+margin: 0 3px;
+border-radius: 2px;
+color: #fff !important;
+background:#f90;
+}

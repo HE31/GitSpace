@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.WdbRepaymentsMapperCustom" >
+<resultMap type="cn.itcast.ssm.po.WdbRepaymentsCustom" id="RepaymentsResultMap">
+ <id property="id" column="Id"  /> 
+  <result property="ordernumber" column="OrderNumber" /> 
+    <result property="custname" column="CustName" />
+      <result property="detail" column="Detail" />
+        <result property="createdate" column="CreateDate" />
+
+        
+        <association property="wdbOrders" javaType="cn.itcast.ssm.po.WdbOrders">    
+            <id property="ordernumber" column="OrderNumber"  /> 
+  <result property="orderdate" column="OrderDate" /> 
+    <result property="times" column="Times" />
+      <result property="hasfirstpay" column="HasFirstPay" />
+        <result property="repayment" column="Repayment" />
+          <result property="customerid" column="CustomerId" />
+            <result property="employeeid" column="EmployeeId" />
+             <result property="productnumber" column="ProductNumber" /> 
+              <result property="orderstatus" column="OrderStatus" /> 
+        </association>
+</resultMap>
+
+
+  	<select id="findAllRepaymentsByCustomerId"  resultMap="RepaymentsResultMap">
+  	 select * from (wdb_repayments join wdb_orders s USING(OrderNumber)) join wdb_customers USING(CustomerId) where CustomerId=#{CustomerId} ORDER BY CreateDate desc
+  	</select>
+</mapper>

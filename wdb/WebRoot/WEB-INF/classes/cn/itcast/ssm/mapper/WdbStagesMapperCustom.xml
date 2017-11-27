@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.WdbStagesMapperCustom" >
+
+  	
+  	<update id="updateStagesForOverdue" parameterType="java.lang.String">  		 			
+   			update wdb_stages set Money = Money*1.2 , BeginDate = BeginDate + INTERVAL #{param2} DAY , EndDate = EndDate + INTERVAL #{param2} DAY  where OrderNumber = #{param1} and RepayStatus in(0,-1)
+  	</update>  	
+  	<select id="updateStagesRepayStatusByOrdernumber" parameterType="java.lang.String" >
+  	
+  	update wdb_stages set RepayStatus ='-1' where OrderNumber = #{param1} and RepayStatus ='0' limit 1
+  	</select>
+  
+</mapper>

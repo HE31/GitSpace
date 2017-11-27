@@ -1,0 +1,31 @@
+/* CSS Document */
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;font-family:"微软雅黑";}
+div{overflow:hidden;}
+a{cursor:pointer;text-decoration:none;outline:none;hidefocus}
+img{border:0;}
+
+/* soft_function */
+.soft_function{width:645px;height:300px;margin:0 auto}
+.soft_con_icon{width:645px;display:block;padding-top:10px;padding-left:25px}
+.soft_con_icon ul li{float:left;display:block;list-style:none;width:100px; margin:0 25px;}
+.soft_con_icon ul li a p{color:#333333;font-size:20px;font-family:"微软雅黑";text-align:left}
+.soft_con{height:296px;width:645px}
+.soft_con1{height:20px;width:645px;background:url(images/line_select_001.gif)}
+.soft_con2{height:175px;width:640px;border-bottom:1px solid #d4d4d4;border-left:1px solid #d4d4d4;border-right:1px solid #d4d4d4;background:#fcfcfc}
+.soft_con2 div{float:left;margin:8px 0px;}
+.function1{height:259px;width:155px;border-right:1px dashed #d4d4d4}
+.function2{height:259px;width:150px;}
+<!--.soft_con2 div img{margin:20px 50px 0px 49px}-->
+.soft_con2 div p{text-align:left;padding-left:10px;}
+.p1{font-size:16px;color:#555555;font-family:"微软雅黑";line-height:45px}
+.p2{font-size:14px;color:#c0c0c0;font-family:"微软雅黑";width:150px;height:45px;line-height:24px;margin:auto;overflow: hidden;text-align:left;}
+
+.wenbenkuang{
+	border-bottom:color:#B9B7B7 1px solid; 
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    background-color: transparent;
+}

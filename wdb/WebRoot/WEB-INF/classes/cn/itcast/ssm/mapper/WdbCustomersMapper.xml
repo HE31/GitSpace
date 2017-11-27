@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.WdbCustomersMapper" >
+  <resultMap id="BaseResultMap" type="cn.itcast.ssm.po.WdbCustomers" >
+    <id column="CustomerId" property="customerid" jdbcType="INTEGER" />
+    <result column="CustNick" property="custnick" jdbcType="VARCHAR" />
+    <result column="CustName" property="custname" jdbcType="VARCHAR" />
+    <result column="CustIdCard" property="custidcard" jdbcType="VARCHAR" />
+    <result column="CustAddress" property="custaddress" jdbcType="VARCHAR" />
+    <result column="CustPhoneNum" property="custphonenum" jdbcType="VARCHAR" />
+    <result column="CustLoginPwd" property="custloginpwd" jdbcType="VARCHAR" />
+    <result column="CustDealPwd" property="custdealpwd" jdbcType="VARCHAR" />
+    <result column="CustParentName" property="custparentname" jdbcType="VARCHAR" />
+    <result column="CustParentPhoneNum" property="custparentphonenum" jdbcType="VARCHAR" />
+    <result column="CustUniversity" property="custuniversity" jdbcType="VARCHAR" />
+    <result column="CustInUniversity" property="custinuniversity" jdbcType="VARCHAR" />
+    <result column="CustEducation" property="custeducation" jdbcType="VARCHAR" />
+    <result column="CustPocketMoney" property="custpocketmoney" jdbcType="REAL" />
+    <result column="CustEmail" property="custemail" jdbcType="VARCHAR" />
+    <result column="CustLevelId" property="custlevelid" jdbcType="INTEGER" />
+    <result column="CustCreditRest" property="custcreditrest" jdbcType="INTEGER" />
+    <result column="CustPoint" property="custpoint" jdbcType="INTEGER" />
+    <result column="CustZipCode" property="custzipcode" jdbcType="VARCHAR" />
+    <result column="CustSex" property="custsex" jdbcType="INTEGER" />
+    <result column="CustRegDate" property="custregdate" jdbcType="TIMESTAMP" />
+    <result column="CustStatus" property="custstatus" jdbcType="INTEGER" />
+    <result column="RoleId" property="roleid" jdbcType="INTEGER" />
+    <result column="CustHead" property="custhead" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="cn.itcast.ssm.po.WdbCustomers" extends="BaseResultMap" >
+    <result column="CustVedio" property="custvedio" jdbcType="BINARY" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    CustomerId, CustNick, CustName, CustIdCard, CustAddress, CustPhoneNum, CustLoginPwd, 
+    CustDealPwd, CustParentName, CustParentPhoneNum, CustUniversity, CustInUniversity, 
+    CustEducation, CustPocketMoney, CustEmail, CustLevelId, CustCreditRest, CustPoint, 
+    CustZipCode, CustSex, CustRegDate, CustStatus, RoleId, CustHead
+  </sql>
+  <sql id="Blob_Column_List" >
+    CustVedio
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="cn.itcast.ssm.po.WdbCustomersExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from wdb_customers
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.itcast.ssm.po.WdbCustomersExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from wdb_customers
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from wdb_customers
+    where CustomerId = #{customerid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from wdb_customers
+    where CustomerId = #{customerid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.itcast.ssm.po.WdbCustomersExample" >
+    delete from wdb_customers
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.itcast.ssm.po.WdbCustomers" >
+    insert into wdb_customers (CustomerId, CustNick, CustName, 
+      CustIdCard, CustAddress, CustPhoneNum, 
+      CustLoginPwd, CustDealPwd, CustParentName, 
+      CustParentPhoneNum, CustUniversity, CustInUniversity, 
+      CustEducation, CustPocketMoney, CustEmail, 
+      CustLevelId, CustCreditRest, CustPoint, 
+      CustZipCode, CustSex, CustRegDate, 
+      CustStatus, RoleId, CustHead, 
+      CustVedio)
+    values (#{customerid,jdbcType=INTEGER}, #{custnick,jdbcType=VARCHAR}, #{custname,jdbcType=VARCHAR}, 
+      #{custidcard,jdbcType=VARCHAR}, #{custaddress,jdbcType=VARCHAR}, #{custphonenum,jdbcType=VARCHAR}, 
+      #{custloginpwd,jdbcType=VARCHAR}, #{custdealpwd,jdbcType=VARCHAR}, #{custparentname,jdbcType=VARCHAR}, 
+      #{custparentphonenum,jdbcType=VARCHAR}, #{custuniversity,jdbcType=VARCHAR}, #{custinuniversity,jdbcType=VARCHAR}, 
+      #{custeducation,jdbcType=VARCHAR}, #{custpocketmoney,jdbcType=REAL}, #{custemail,jdbcType=VARCHAR}, 
+      #{custlevelid,jdbcType=INTEGER}, #{custcreditrest,jdbcType=INTEGER}, #{custpoint,jdbcType=INTEGER}, 
+      #{custzipcode,jdbcType=VARCHAR}, #{custsex,jdbcType=INTEGER}, #{custregdate,jdbcType=TIMESTAMP}, 
+      #{custstatus,jdbcType=INTEGER}, #{roleid,jdbcType=INTEGER}, #{custhead,jdbcType=VARCHAR}, 
+      #{custvedio,jdbcType=BINARY})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.itcast.ssm.po.WdbCustomers" >
+    insert into wdb_customers
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="customerid != null" >
+        CustomerId,
+      </if>
+      <if test="custnick != null" >
+        CustNick,
+      </if>
+      <if test="custname != null" >
+        CustName,
+      </if>
+      <if test="custidcard != null" >
+        CustIdCard,
+      </if>
+      <if test="custaddress != null" >
+        CustAddress,
+      </if>
+      <if test="custphonenum != null" >
+        CustPhoneNum,
+      </if>
+      <if test="custloginpwd != null" >
+        CustLoginPwd,
+      </if>
+      <if test="custdealpwd != null" >
+        CustDealPwd,
+      </if>
+      <if test="custparentname != null" >
+        CustParentName,
+      </if>
+      <if test="custparentphonenum != null" >
+        CustParentPhoneNum,
+      </if>
+      <if test="custuniversity != null" >
+        CustUniversity,
+      </if>
+      <if test="custinuniversity != null" >
+        CustInUniversity,
+      </if>
+      <if test="custeducation != null" >
+        CustEducation,
+      </if>
+      <if test="custpocketmoney != null" >
+        CustPocketMoney,
+      </if>
+      <if test="custemail != null" >
+        CustEmail,
+      </if>
+      <if test="custlevelid != null" >
+        CustLevelId,
+      </if>
+      <if test="custcreditrest != null" >
+        CustCreditRest,
+      </if>
+      <if test="custpoint != null" >
+        CustPoint,
+      </if>
+      <if test="custzipcode != null" >
+        CustZipCode,
+      </if>
+      <if test="custsex != null" >
+        CustSex,
+      </if>
+      <if test="custregdate != null" >
+        CustRegDate,
+      </if>
+      <if test="custstatus != null" >
+        CustStatus,
+      </if>
+      <if test="roleid != null" >
+        RoleId,
+      </if>
+      <if test="custhead != null" >
+        CustHead,
+      </if>
+      <if test="custvedio != null" >
+        CustVedio,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="customerid != null" >
+        #{customerid,jdbcType=INTEGER},
+      </if>
+      <if test="custnick != null" >
+        #{custnick,jdbcType=VARCHAR},
+      </if>
+      <if test="custname != null" >
+        #{custname,jdbcType=VARCHAR},
+      </if>
+      <if test="custidcard != null" >
+        #{custidcard,jdbcType=VARCHAR},
+      </if>
+      <if test="custaddress != null" >
+        #{custaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="custphonenum != null" >
+        #{custphonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="custloginpwd != null" >
+        #{custloginpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="custdealpwd != null" >
+        #{custdealpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="custparentname != null" >
+        #{custparentname,jdbcType=VARCHAR},
+      </if>
+      <if test="custparentphonenum != null" >
+        #{custparentphonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="custuniversity != null" >
+        #{custuniversity,jdbcType=VARCHAR},
+      </if>
+      <if test="custinuniversity != null" >
+        #{custinuniversity,jdbcType=VARCHAR},
+      </if>
+      <if test="custeducation != null" >
+        #{custeducation,jdbcType=VARCHAR},
+      </if>
+      <if test="custpocketmoney != null" >
+        #{custpocketmoney,jdbcType=REAL},
+      </if>
+      <if test="custemail != null" >
+        #{custemail,jdbcType=VARCHAR},
+      </if>
+      <if test="custlevelid != null" >
+        #{custlevelid,jdbcType=INTEGER},
+      </if>
+      <if test="custcreditrest != null" >
+        #{custcreditrest,jdbcType=INTEGER},
+      </if>
+      <if test="custpoint != null" >
+        #{custpoint,jdbcType=INTEGER},
+      </if>
+      <if test="custzipcode != null" >
+        #{custzipcode,jdbcType=VARCHAR},
+      </if>
+      <if test="custsex != null" >
+        #{custsex,jdbcType=INTEGER},
+      </if>
+      <if test="custregdate != null" >
+        #{custregdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="custstatus != null" >
+        #{custstatus,jdbcType=INTEGER},
+      </if>
+      <if test="roleid != null" >
+        #{roleid,jdbcType=INTEGER},
+      </if>
+      <if test="custhead != null" >
+        #{custhead,jdbcType=VARCHAR},
+      </if>
+      <if test="custvedio != null" >
+        #{custvedio,jdbcType=BINARY},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.itcast.ssm.po.WdbCustomersExample" resultType="java.lang.Integer" >
+    select count(*) from wdb_customers
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update wdb_customers
+    <set >
+      <if test="record.customerid != null" >
+        CustomerId = #{record.customerid,jdbcType=INTEGER},
+      </if>
+      <if test="record.custnick != null" >
+        CustNick = #{record.custnick,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custname != null" >
+        CustName = #{record.custname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custidcard != null" >
+        CustIdCard = #{record.custidcard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custaddress != null" >
+        CustAddress = #{record.custaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custphonenum != null" >
+        CustPhoneNum = #{record.custphonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custloginpwd != null" >
+        CustLoginPwd = #{record.custloginpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custdealpwd != null" >
+        CustDealPwd = #{record.custdealpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custparentname != null" >
+        CustParentName = #{record.custparentname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custparentphonenum != null" >
+        CustParentPhoneNum = #{record.custparentphonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custuniversity != null" >
+        CustUniversity = #{record.custuniversity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custinuniversity != null" >
+        CustInUniversity = #{record.custinuniversity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custeducation != null" >
+        CustEducation = #{record.custeducation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custpocketmoney != null" >
+        CustPocketMoney = #{record.custpocketmoney,jdbcType=REAL},
+      </if>
+      <if test="record.custemail != null" >
+        CustEmail = #{record.custemail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custlevelid != null" >
+        CustLevelId = #{record.custlevelid,jdbcType=INTEGER},
+      </if>
+      <if test="record.custcreditrest != null" >
+        CustCreditRest = #{record.custcreditrest,jdbcType=INTEGER},
+      </if>
+      <if test="record.custpoint != null" >
+        CustPoint = #{record.custpoint,jdbcType=INTEGER},
+      </if>
+      <if test="record.custzipcode != null" >
+        CustZipCode = #{record.custzipcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custsex != null" >
+        CustSex = #{record.custsex,jdbcType=INTEGER},
+      </if>
+      <if test="record.custregdate != null" >
+        CustRegDate = #{record.custregdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.custstatus != null" >
+        CustStatus = #{record.custstatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.roleid != null" >
+        RoleId = #{record.roleid,jdbcType=INTEGER},
+      </if>
+      <if test="record.custhead != null" >
+        CustHead = #{record.custhead,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custvedio != null" >
+        CustVedio = #{record.custvedio,jdbcType=BINARY},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update wdb_customers
+    set CustomerId = #{record.customerid,jdbcType=INTEGER},
+      CustNick = #{record.custnick,jdbcType=VARCHAR},
+      CustName = #{record.custname,jdbcType=VARCHAR},
+      CustIdCard = #{record.custidcard,jdbcType=VARCHAR},
+      CustAddress = #{record.custaddress,jdbcType=VARCHAR},
+      CustPhoneNum = #{record.custphonenum,jdbcType=VARCHAR},
+      CustLoginPwd = #{record.custloginpwd,jdbcType=VARCHAR},
+      CustDealPwd = #{record.custdealpwd,jdbcType=VARCHAR},
+      CustParentName = #{record.custparentname,jdbcType=VARCHAR},
+      CustParentPhoneNum = #{record.custparentphonenum,jdbcType=VARCHAR},
+      CustUniversity = #{record.custuniversity,jdbcType=VARCHAR},
+      CustInUniversity = #{record.custinuniversity,jdbcType=VARCHAR},
+      CustEducation = #{record.custeducation,jdbcType=VARCHAR},
+      CustPocketMoney = #{record.custpocketmoney,jdbcType=REAL},
+      CustEmail = #{record.custemail,jdbcType=VARCHAR},
+      CustLevelId = #{record.custlevelid,jdbcType=INTEGER},
+      CustCreditRest = #{record.custcreditrest,jdbcType=INTEGER},
+      CustPoint = #{record.custpoint,jdbcType=INTEGER},
+      CustZipCode = #{record.custzipcode,jdbcType=VARCHAR},
+      CustSex = #{record.custsex,jdbcType=INTEGER},
+      CustRegDate = #{record.custregdate,jdbcType=TIMESTAMP},
+      CustStatus = #{record.custstatus,jdbcType=INTEGER},
+      RoleId = #{record.roleid,jdbcType=INTEGER},
+      CustHead = #{record.custhead,jdbcType=VARCHAR},
+      CustVedio = #{record.custvedio,jdbcType=BINARY}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update wdb_customers
+    set CustomerId = #{record.customerid,jdbcType=INTEGER},
+      CustNick = #{record.custnick,jdbcType=VARCHAR},
+      CustName = #{record.custname,jdbcType=VARCHAR},
+      CustIdCard = #{record.custidcard,jdbcType=VARCHAR},
+      CustAddress = #{record.custaddress,jdbcType=VARCHAR},
+      CustPhoneNum = #{record.custphonenum,jdbcType=VARCHAR},
+      CustLoginPwd = #{record.custloginpwd,jdbcType=VARCHAR},
+      CustDealPwd = #{record.custdealpwd,jdbcType=VARCHAR},
+      CustParentName = #{record.custparentname,jdbcType=VARCHAR},
+      CustParentPhoneNum = #{record.custparentphonenum,jdbcType=VARCHAR},
+      CustUniversity = #{record.custuniversity,jdbcType=VARCHAR},
+      CustInUniversity = #{record.custinuniversity,jdbcType=VARCHAR},
+      CustEducation = #{record.custeducation,jdbcType=VARCHAR},
+      CustPocketMoney = #{record.custpocketmoney,jdbcType=REAL},
+      CustEmail = #{record.custemail,jdbcType=VARCHAR},
+      CustLevelId = #{record.custlevelid,jdbcType=INTEGER},
+      CustCreditRest = #{record.custcreditrest,jdbcType=INTEGER},
+      CustPoint = #{record.custpoint,jdbcType=INTEGER},
+      CustZipCode = #{record.custzipcode,jdbcType=VARCHAR},
+      CustSex = #{record.custsex,jdbcType=INTEGER},
+      CustRegDate = #{record.custregdate,jdbcType=TIMESTAMP},
+      CustStatus = #{record.custstatus,jdbcType=INTEGER},
+      RoleId = #{record.roleid,jdbcType=INTEGER},
+      CustHead = #{record.custhead,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.itcast.ssm.po.WdbCustomers" >
+    update wdb_customers
+    <set >
+      <if test="custnick != null" >
+        CustNick = #{custnick,jdbcType=VARCHAR},
+      </if>
+      <if test="custname != null" >
+        CustName = #{custname,jdbcType=VARCHAR},
+      </if>
+      <if test="custidcard != null" >
+        CustIdCard = #{custidcard,jdbcType=VARCHAR},
+      </if>
+      <if test="custaddress != null" >
+        CustAddress = #{custaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="custphonenum != null" >
+        CustPhoneNum = #{custphonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="custloginpwd != null" >
+        CustLoginPwd = #{custloginpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="custdealpwd != null" >
+        CustDealPwd = #{custdealpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="custparentname != null" >
+        CustParentName = #{custparentname,jdbcType=VARCHAR},
+      </if>
+      <if test="custparentphonenum != null" >
+        CustParentPhoneNum = #{custparentphonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="custuniversity != null" >
+        CustUniversity = #{custuniversity,jdbcType=VARCHAR},
+      </if>
+      <if test="custinuniversity != null" >
+        CustInUniversity = #{custinuniversity,jdbcType=VARCHAR},
+      </if>
+      <if test="custeducation != null" >
+        CustEducation = #{custeducation,jdbcType=VARCHAR},
+      </if>
+      <if test="custpocketmoney != null" >
+        CustPocketMoney = #{custpocketmoney,jdbcType=REAL},
+      </if>
+      <if test="custemail != null" >
+        CustEmail = #{custemail,jdbcType=VARCHAR},
+      </if>
+      <if test="custlevelid != null" >
+        CustLevelId = #{custlevelid,jdbcType=INTEGER},
+      </if>
+      <if test="custcreditrest != null" >
+        CustCreditRest = #{custcreditrest,jdbcType=INTEGER},
+      </if>
+      <if test="custpoint != null" >
+        CustPoint = #{custpoint,jdbcType=INTEGER},
+      </if>
+      <if test="custzipcode != null" >
+        CustZipCode = #{custzipcode,jdbcType=VARCHAR},
+      </if>
+      <if test="custsex != null" >
+        CustSex = #{custsex,jdbcType=INTEGER},
+      </if>
+      <if test="custregdate != null" >
+        CustRegDate = #{custregdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="custstatus != null" >
+        CustStatus = #{custstatus,jdbcType=INTEGER},
+      </if>
+      <if test="roleid != null" >
+        RoleId = #{roleid,jdbcType=INTEGER},
+      </if>
+      <if test="custhead != null" >
+        CustHead = #{custhead,jdbcType=VARCHAR},
+      </if>
+      <if test="custvedio != null" >
+        CustVedio = #{custvedio,jdbcType=BINARY},
+      </if>
+    </set>
+    where CustomerId = #{customerid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.itcast.ssm.po.WdbCustomers" >
+    update wdb_customers
+    set CustNick = #{custnick,jdbcType=VARCHAR},
+      CustName = #{custname,jdbcType=VARCHAR},
+      CustIdCard = #{custidcard,jdbcType=VARCHAR},
+      CustAddress = #{custaddress,jdbcType=VARCHAR},
+      CustPhoneNum = #{custphonenum,jdbcType=VARCHAR},
+      CustLoginPwd = #{custloginpwd,jdbcType=VARCHAR},
+      CustDealPwd = #{custdealpwd,jdbcType=VARCHAR},
+      CustParentName = #{custparentname,jdbcType=VARCHAR},
+      CustParentPhoneNum = #{custparentphonenum,jdbcType=VARCHAR},
+      CustUniversity = #{custuniversity,jdbcType=VARCHAR},
+      CustInUniversity = #{custinuniversity,jdbcType=VARCHAR},
+      CustEducation = #{custeducation,jdbcType=VARCHAR},
+      CustPocketMoney = #{custpocketmoney,jdbcType=REAL},
+      CustEmail = #{custemail,jdbcType=VARCHAR},
+      CustLevelId = #{custlevelid,jdbcType=INTEGER},
+      CustCreditRest = #{custcreditrest,jdbcType=INTEGER},
+      CustPoint = #{custpoint,jdbcType=INTEGER},
+      CustZipCode = #{custzipcode,jdbcType=VARCHAR},
+      CustSex = #{custsex,jdbcType=INTEGER},
+      CustRegDate = #{custregdate,jdbcType=TIMESTAMP},
+      CustStatus = #{custstatus,jdbcType=INTEGER},
+      RoleId = #{roleid,jdbcType=INTEGER},
+      CustHead = #{custhead,jdbcType=VARCHAR},
+      CustVedio = #{custvedio,jdbcType=BINARY}
+    where CustomerId = #{customerid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.itcast.ssm.po.WdbCustomers" >
+    update wdb_customers
+    set CustNick = #{custnick,jdbcType=VARCHAR},
+      CustName = #{custname,jdbcType=VARCHAR},
+      CustIdCard = #{custidcard,jdbcType=VARCHAR},
+      CustAddress = #{custaddress,jdbcType=VARCHAR},
+      CustPhoneNum = #{custphonenum,jdbcType=VARCHAR},
+      CustLoginPwd = #{custloginpwd,jdbcType=VARCHAR},
+      CustDealPwd = #{custdealpwd,jdbcType=VARCHAR},
+      CustParentName = #{custparentname,jdbcType=VARCHAR},
+      CustParentPhoneNum = #{custparentphonenum,jdbcType=VARCHAR},
+      CustUniversity = #{custuniversity,jdbcType=VARCHAR},
+      CustInUniversity = #{custinuniversity,jdbcType=VARCHAR},
+      CustEducation = #{custeducation,jdbcType=VARCHAR},
+      CustPocketMoney = #{custpocketmoney,jdbcType=REAL},
+      CustEmail = #{custemail,jdbcType=VARCHAR},
+      CustLevelId = #{custlevelid,jdbcType=INTEGER},
+      CustCreditRest = #{custcreditrest,jdbcType=INTEGER},
+      CustPoint = #{custpoint,jdbcType=INTEGER},
+      CustZipCode = #{custzipcode,jdbcType=VARCHAR},
+      CustSex = #{custsex,jdbcType=INTEGER},
+      CustRegDate = #{custregdate,jdbcType=TIMESTAMP},
+      CustStatus = #{custstatus,jdbcType=INTEGER},
+      RoleId = #{roleid,jdbcType=INTEGER},
+      CustHead = #{custhead,jdbcType=VARCHAR}
+    where CustomerId = #{customerid,jdbcType=INTEGER}
+  </update>
+</mapper>

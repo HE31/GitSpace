@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.WdbStagesMapper" >
+  <resultMap id="BaseResultMap" type="cn.itcast.ssm.po.WdbStages" >
+    <result column="OrderNumber" property="ordernumber" jdbcType="VARCHAR" />
+    <result column="Time" property="time" jdbcType="INTEGER" />
+    <result column="BeginDate" property="begindate" jdbcType="DATE" />
+    <result column="EndDate" property="enddate" jdbcType="DATE" />
+    <result column="PayDate" property="paydate" jdbcType="TIMESTAMP" />
+    <result column="RepayStatus" property="repaystatus" jdbcType="INTEGER" />
+    <result column="money" property="money" jdbcType="REAL" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    OrderNumber, Time, BeginDate, EndDate, PayDate, RepayStatus, money
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.itcast.ssm.po.WdbStagesExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from wdb_stages
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="cn.itcast.ssm.po.WdbStagesExample" >
+    delete from wdb_stages
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.itcast.ssm.po.WdbStages" >
+    insert into wdb_stages (OrderNumber, Time, BeginDate, 
+      EndDate, PayDate, RepayStatus, 
+      money)
+    values (#{ordernumber,jdbcType=VARCHAR}, #{time,jdbcType=INTEGER}, #{begindate,jdbcType=DATE}, 
+      #{enddate,jdbcType=DATE}, #{paydate,jdbcType=TIMESTAMP}, #{repaystatus,jdbcType=INTEGER}, 
+      #{money,jdbcType=REAL})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.itcast.ssm.po.WdbStages" >
+    insert into wdb_stages
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ordernumber != null" >
+        OrderNumber,
+      </if>
+      <if test="time != null" >
+        Time,
+      </if>
+      <if test="begindate != null" >
+        BeginDate,
+      </if>
+      <if test="enddate != null" >
+        EndDate,
+      </if>
+      <if test="paydate != null" >
+        PayDate,
+      </if>
+      <if test="repaystatus != null" >
+        RepayStatus,
+      </if>
+      <if test="money != null" >
+        money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ordernumber != null" >
+        #{ordernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=INTEGER},
+      </if>
+      <if test="begindate != null" >
+        #{begindate,jdbcType=DATE},
+      </if>
+      <if test="enddate != null" >
+        #{enddate,jdbcType=DATE},
+      </if>
+      <if test="paydate != null" >
+        #{paydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="repaystatus != null" >
+        #{repaystatus,jdbcType=INTEGER},
+      </if>
+      <if test="money != null" >
+        #{money,jdbcType=REAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.itcast.ssm.po.WdbStagesExample" resultType="java.lang.Integer" >
+    select count(*) from wdb_stages
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update wdb_stages
+    <set >
+      <if test="record.ordernumber != null" >
+        OrderNumber = #{record.ordernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.time != null" >
+        Time = #{record.time,jdbcType=INTEGER},
+      </if>
+      <if test="record.begindate != null" >
+        BeginDate = #{record.begindate,jdbcType=DATE},
+      </if>
+      <if test="record.enddate != null" >
+        EndDate = #{record.enddate,jdbcType=DATE},
+      </if>
+      <if test="record.paydate != null" >
+        PayDate = #{record.paydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.repaystatus != null" >
+        RepayStatus = #{record.repaystatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.money != null" >
+        money = #{record.money,jdbcType=REAL},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update wdb_stages
+    set OrderNumber = #{record.ordernumber,jdbcType=VARCHAR},
+      Time = #{record.time,jdbcType=INTEGER},
+      BeginDate = #{record.begindate,jdbcType=DATE},
+      EndDate = #{record.enddate,jdbcType=DATE},
+      PayDate = #{record.paydate,jdbcType=TIMESTAMP},
+      RepayStatus = #{record.repaystatus,jdbcType=INTEGER},
+      money = #{record.money,jdbcType=REAL}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>
