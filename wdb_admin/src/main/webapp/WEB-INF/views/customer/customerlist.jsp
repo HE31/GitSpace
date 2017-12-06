@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>微你而生后台管理系统</title>
+<title>大学生信用生活服务平台后台管理系统</title>
 
 <link type="text/css" rel="stylesheet" href="${__static__}/css/main.css" >
 
@@ -203,7 +203,7 @@ $(document).ready(function(){
 		
 		
 <div class="bottom"></div>
-<div id="footer"><p>微你而生后台管理系统</p></div>
+<div id="footer"><p>大学生信用生活服务平台后台管理系统</p></div>
 
 <!-- <script>navList(12);</script> -->
 

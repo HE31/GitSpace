@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
 	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>微你而生后台管理系统</title>
+<title>大学生信用生活服务平台后台管理系统</title>
  <link type="text/css" rel="stylesheet" href="${__static__}/css/style.css" /> 
 
 <script type="text/javascript" src="${__static__}/js/menu.js"></script> 

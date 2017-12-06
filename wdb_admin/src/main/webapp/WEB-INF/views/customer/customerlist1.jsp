@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>微你而生后台管理系统</title>
+	<title>大学生信用生活服务平台后台管理系统</title>
 	<script type="text/javascript">
 		var ZLZ = window.ZLZ = {
 			"ROOT"   : "${__root__}",

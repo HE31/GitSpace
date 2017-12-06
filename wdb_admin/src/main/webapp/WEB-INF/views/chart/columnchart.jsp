@@ -182,7 +182,7 @@ var xtext = [];
 	</div>
 	</div>
 	<div class="bottom"></div>
-<div id="footer"><p>微你而生后台管理系统</p></div>
+<div id="footer"><p>大学生信用生活服务平台后台管理系统</p></div>
     </body>
 </html>
  
