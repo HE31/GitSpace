@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script>
 		var ZLZ = window.ZLZ = {
 			"ROOT"   : "${__root__}",
-			"URL"    : "${__url__}",、
+			"URL"    : "${__url__}",
 			"STATIC" : "${__static__}"
 		}
 	</script>

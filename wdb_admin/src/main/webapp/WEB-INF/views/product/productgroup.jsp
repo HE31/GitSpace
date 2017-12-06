@@ -109,7 +109,7 @@ $(document).ready(function() {
     </select>
   <script>
        var i=${functionid}+0+1;
-	 $("#t1").get(0).selectedIndex=i;
+	$("#t1").get(0).selectedIndex=i;
 </script>
     </div>
  
