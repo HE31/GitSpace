@@ -77,6 +77,8 @@ span{
                 <label class="rgItemname">入学年份： </label>
                    <select name="enterdate" class="nice-select2" required data-msg-required="请选择入学年份" data-rule-gt="true" data-gt="0">
                    <option value="0">请选择入学年份</option>
+                    <option value="2018" <c:if test="${'2018' eq wdbCustomersCustom.getCustinuniversity()}">selected</c:if>>2018年</option>
+                    <option value="2017" <c:if test="${'2017' eq wdbCustomersCustom.getCustinuniversity()}">selected</c:if>>2017年</option>
                    <option value="2016" <c:if test="${'2016' eq wdbCustomersCustom.getCustinuniversity()}">selected</c:if>>2016年</option>
                    <option value="2015" <c:if test="${'2015' eq wdbCustomersCustom.getCustinuniversity()}">selected</c:if>>2015年</option>
                    <option value="2014" <c:if test="${'2014' eq wdbCustomersCustom.getCustinuniversity()}">selected</c:if>>2014年</option>

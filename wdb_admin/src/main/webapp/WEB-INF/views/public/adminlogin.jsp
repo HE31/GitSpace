@@ -38,7 +38,7 @@ document.getElementById("pwd").setAttribute("placeholder","用户名或密码错
 <body>
 <dl class="admin_login">
  <dt>
-  <strong>微你而生后台管理系统</strong>
+  <strong>大学生信用生活服务平台后台管理系统</strong>
   <em>EXIST FOR YOU Management System</em>
  </dt>
  <form action="${pageContext.request.contextPath }/public/loginCheck.action" method="post" name="client"> 

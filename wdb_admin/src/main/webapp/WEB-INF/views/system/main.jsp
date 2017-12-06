@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>微你而生后台管理系统</title>
+        <title>大学生信用生活服务平台后台管理系统</title>
         <link type="text/css" rel="stylesheet" href="${__static__}/css/main.css" >
         <script type="text/javascript" src="${__static__}/js/jquery.js"></script>
     </head>
@@ -46,7 +46,7 @@
     
     <div class="welinfo">
     <span><img src="${__static__}/images/sun.png" alt="天气" /></span>
-    <b>${account }您好，欢迎使用微你而生后台管理系统</b>
+    <b>${account }您好，欢迎使用大学生信用生活服务平台后台管理系统</b>
     <a href="JavaScript:void(0)">帐号设置</a>
     </div>
     
@@ -72,7 +72,7 @@
     
     <div class="welinfo">
     <span><img src="${__static__}/images/dp.png" alt="提醒" /></span>
-    <b>微你而生后台管理系统使用指南</b>
+    <b>大学生信用生活服务平台后台管理系统使用指南</b>
     </div>
     
     <ul class="infolist">
@@ -83,7 +83,7 @@
     
     <div class="xline"></div>
     
-    <div class="uimakerinfo"><b>查看微你而生后台管理系统功能，您可以了解到更多后台管理界面,操作功能等相关信息</b></div>
+    <div class="uimakerinfo"><b>查看大学生信用生活服务平台后台管理系统功能，您可以了解到更多后台管理界面,操作功能等相关信息</b></div>
     
     <ul class="umlist">
     <li><a href="${pageContext.request.contextPath }/product/productgroup.action?functionid=0">商品管理</a></li>
@@ -96,7 +96,7 @@
     </div></div></div>
     </div>
 	<div class="bottom"></div>
-<div id="footer"><p>微你而生后台管理系统</p></div>
+<div id="footer"><p>大学生信用生活服务平台后台管理系统</p></div>
     </body>
 </html>
  

@@ -119,7 +119,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<p class="pay-font">4.录制完成后点击下方”确定“提交视频认证即可。</p>
 		</div>
 		
-			<div class="videobox"><div class="ziti2 ">&nbsp;&nbsp;我是张三，学号000000，身份证号是0000000000000000，我于2016年03月27日与微贷吧签订《微贷吧贷款信用担保协议》，对于上述协议的各条款内容，本人均已认证阅读，理解并自愿遵守执行，根据信用担保协议，我已收到微贷吧的贷款本金，共计人民币2000元。</div></div>
+			<div class="videobox"><div class="ziti2 ">&nbsp;&nbsp;我是张三，学号000000，身份证号是0000000000000000，我于2017年03月27日与微贷吧签订《微贷吧贷款信用担保协议》，对于上述协议的各条款内容，本人均已认证阅读，理解并自愿遵守执行，根据信用担保协议，我已收到微贷吧的贷款本金，共计人民币2000元。</div></div>
 					<div class="hrStyle"></div>
 <br><br>
 					<div class="pay-grid">

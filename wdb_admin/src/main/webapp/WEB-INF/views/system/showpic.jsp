@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>微你而生后台管理系统</title>
+        <title>大学生信用生活服务平台后台管理系统</title>
         <link type="text/css" rel="stylesheet" href="${__static__}/system/css/public.css" >
         <script type="text/javascript" src="${__static__}/js/jquery.js"></script>
         <script src="${__static__}/system/js/global.js"></script>
@@ -40,7 +40,7 @@
     <ul class="placeul">
     <li><a href="#">首页</a></li>
     <li><a href="#">数据统计</a></li>
-    <li><a href="#">2016"微"系列产品销售统计饼状图
+    <li><a href="#">2017"微"系列产品销售统计饼状图
 </a></li>
     </ul>
     </div>
@@ -127,7 +127,7 @@
 	</div>
 	</div>
 	<div class="bottom"></div>
-<div id="footer"><p>微你而生后台管理系统</p></div>
+<div id="footer"><p>大学生信用生活服务平台后台管理系统</p></div>
     </body>
 </html>
  

@@ -20,14 +20,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>微你而生后台管理系统</title>
+<title>大学生信用生活服务平台后台管理系统</title>
 
   </head>
   
   <body>
   <div class="top"></div>
 <div id="header">
-	<div class="logo">微你而生后台管理系统</div>
+	<div class="logo">大学生信用生活服务平台后台管理系统</div>
 	<div class="navigation">
 		<ul>
 		 	<li>欢迎您！</li>
