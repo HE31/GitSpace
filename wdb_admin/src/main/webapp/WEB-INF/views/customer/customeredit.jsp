@@ -274,7 +274,7 @@ input[name="demo[]"]{     width: 200px;
 
 		</div>
 <div class="bottom"></div>
-<div id="footer"><p>微贷吧后台管理系统</p></div>
+<div id="footer"><p>大学生信用生活服务平台后台管理系统</p></div>
 
 <!-- <script>navList(12);</script> -->
 

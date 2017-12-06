@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
 <meta charset="utf-8"/>
-<title>微你而生后台登录</title>
+<title>大学生信用生活服务平台后台登录</title>
 <meta name="author" content="DeathGhost" />
 <link rel="stylesheet" type="text/css" href="${__static__}/css/style1.css" />
 <style>
@@ -26,8 +26,8 @@ document.getElementById("pwd").setAttribute("placeholder","用户名或密码错
    
    /*   dotColor: '#D9DFE7',
     lineColor: '#D9DFE7' */
-      dotColor: '#E4D253',
-    lineColor: '#E4D253'
+     /*  dotColor: '#E4D253',
+    lineColor: '#E4D253' */
   });
   //验证码
   createCode();

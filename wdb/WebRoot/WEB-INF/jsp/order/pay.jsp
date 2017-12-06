@@ -67,7 +67,7 @@ input[type="button"]:hover{
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            ${custnick }, 欢迎来到微你而生</div>
+            ${custnick }, 欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
 	               
 	                <div id="J_newsFont" class="fl mr20 newsFont"><a href="#">消息（<b class="orange-color H_newsNum">24</b>）</a>
@@ -106,7 +106,7 @@ input[type="button"]:hover{
 	<center><img src="../images/shopping1.png"></center>
 	
 	<div class="pay-grid">
-				 <h3 class="pay-method"> <img src="../images/bluearrow.png">&nbsp;微你而生账户支付：</h3><br>
+				 <h3 class="pay-method"> <img src="../images/bluearrow.png">&nbsp;大学生信用生活服务平台账户支付：</h3><br>
 				
 					<p class="pay-font">本次应付总金额：<font color="#FF7F00"><strong>${firstpay }</strong></font>元</p>
 	

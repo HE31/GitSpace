@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>”微你而生“近一年各类型产品销量统计</title>
+        <title>”大学生信用生活服务平台“近一年各类型产品销量统计</title>
         <link type="text/css" rel="stylesheet" href="${__static__}/css/main.css" >
         <script type="text/javascript" src="${__static__}/js/jquery.js"></script>
         <script src="${__static__}/js/highcharts.js"></script>
@@ -76,7 +76,7 @@ $(function () {
             type: 'line'
         },
         title: {
-            text: '”微你而生“近一年各类型产品销量统计'
+            text: '”大学生信用生活服务平台“近一年各类型产品销量统计'
         },
         subtitle: {
             text: ''
@@ -151,7 +151,7 @@ $(function () {
     <ul class="placeul">
     <li><a href="#">首页</a></li>
     <li><a href="#">数据统计</a></li>
-    <li><a href="#">”微你而生“近一年各类型产品销量统计
+    <li><a href="#">”大学生信用生活服务平台“近一年各类型产品销量统计
 </a></li>
     </ul>
     </div>

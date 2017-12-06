@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="../images/icon_wdb.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="../images/icon_wdb.ico" type="image/x-icon" />
-    <title>微你而生个人中心</title>
+    <title>大学生信用生活服务平台个人中心</title>
    
     
     <link rel="stylesheet" type="text/css" href="../css/base.css">
@@ -25,7 +25,7 @@
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            ${custnick}, 欢迎来到微你而生</div>
+            ${custnick}, 欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
 	              
                 <a class="fl mr20" href="#" target="_blank">帮助中心</a>
@@ -514,7 +514,7 @@
             <div class="clearfix">
             <div class="fl bdLine">
                 <ul class="fl unit ml15" style="width:120px">
-                    <li class="first"><em>微你而生</em></li>
+                    <li class="first"><em>大学生信用生活服务平台</em></li>
                     <li><a href="#" target="_blank">关于我们</a></li>
                     <li><a href="#" target="_blank">加入我们</a></li>
                     <li><a href="#" target="_blank">联系我们</a></li>
@@ -551,7 +551,7 @@
                 </div>
                    <div class="fl bdLine">
                 <ul class="fl unit ml30" style="width:175px">
-                   <li class="first"><em>手机微你而生</em></li>
+                   <li class="first"><em>手机大学生信用生活服务平台</em></li>
                     <li></li>
                     <li><a href="#" target="_blank"><img src="../images/ip_icon.jpg"></a></li>
                     <li><a href="#"><img src="../images/ad_icon.jpg"></a></li>

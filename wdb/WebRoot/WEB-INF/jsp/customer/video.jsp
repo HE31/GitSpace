@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!-- requirejs main -->
 <link rel="stylesheet" type="text/css" href="../css/index1.css">
 
-<title>微贷吧视频认证</title>
+<title>大学生信用生活服务平台视频认证</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="Keywords" content="flash头像上传组件，仿新浪微博头像上传组件，头像图片剪裁" />
   <meta name="Description" content="flash 上传头像，用户体验好，头像剪裁，预览组件" />
@@ -62,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            ${custnick},欢迎来到微贷吧</div>
+            ${custnick},欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
                 <a class="fl mr20" href="${pageContext.request.contextPath }/customer/Personal.action" target="_blank">个人中心</a>
                 <span class="fl mr20">咨询热线：888-888-8888</span>
@@ -75,7 +75,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="header-top">
             <div class="layout1200">
                 <div class="clearfix">
-                    <a class="fl header-logo"  title="微贷吧——大学生理想分期贷款服务平台"></a><img src="../images/videolog.png">
+                    <a class="fl header-logo"  title="大学生信用生活服务平台——大学生理想分期贷款服务平台"></a><img src="../images/videolog.png">
                 </div>
             </div>
         </div>
@@ -119,7 +119,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<p class="pay-font">4.录制完成后点击下方”确定“提交视频认证即可。</p>
 		</div>
 		
-			<div class="videobox"><div class="ziti2 ">&nbsp;&nbsp;我是张三，学号000000，身份证号是0000000000000000，我于2017年03月27日与微贷吧签订《微贷吧贷款信用担保协议》，对于上述协议的各条款内容，本人均已认证阅读，理解并自愿遵守执行，根据信用担保协议，我已收到微贷吧的贷款本金，共计人民币2000元。</div></div>
+			<div class="videobox"><div class="ziti2 ">&nbsp;&nbsp;我是张三，学号000000，身份证号是0000000000000000，我于2017年03月27日与大学生信用生活服务平台签订《大学生信用生活服务平台贷款信用担保协议》，对于上述协议的各条款内容，本人均已认证阅读，理解并自愿遵守执行，根据信用担保协议，我已收到大学生信用生活服务平台的贷款本金，共计人民币2000元。</div></div>
 					<div class="hrStyle"></div>
 <br><br>
 					<div class="pay-grid">
@@ -165,7 +165,7 @@ PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
             <div class="clearfix">
             <div class="fl bdLine">
                 <ul class="fl unit ml15" style="width:120px">
-                    <li class="first"><em>微贷吧</em></li>
+                    <li class="first"><em>大学生信用生活服务平台</em></li>
                     <li><a href="#" target="_blank">关于我们</a></li>
                     <li><a href="#" target="_blank">加入我们</a></li>
                     <li><a href="#" target="_blank">联系我们</a></li>
@@ -202,7 +202,7 @@ PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
                 </div>
                    <div class="fl bdLine">
                 <ul class="fl unit ml30" style="width:175px">
-                   <li class="first"><em>手机微贷吧</em></li>
+                   <li class="first"><em>手机大学生信用生活服务平台</em></li>
                     <li></li>
                     <li><a href="JavaScript:;" target="_blank"><img src="../images/ip_icon.jpg"></a></li>
                     <li><a href="http://www.weidaiba.com/download/app"><img src="../images/ad_icon.jpg"></a></li>

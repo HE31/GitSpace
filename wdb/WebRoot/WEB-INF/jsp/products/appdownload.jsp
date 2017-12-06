@@ -32,7 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            欢迎来到微你而生</div>
+            欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
                 <a class="fl mr20" href="/helpcenter.html" target="_blank">帮助中心</a>
                 <span class="fl mr20">咨询热线：888-8888-8888</span>
@@ -95,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-info">
 				<div class="col-md-7 header-info-left">
 					<h1>用心服务，<br> 打造美好大学生活</h1>
-					<p>微你而生，大学生理想分期消费服务平台 </p>
+					<p>大学生信用生活服务平台，大学生理想分期消费服务平台 </p>
 					<a href="#" class="btn btn-primary btn-normal btn-inline " target="_self">Android下载</a>
 					<div class="social-networks">
 						

@@ -28,7 +28,7 @@
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            ${custnick } 欢迎来到微你而生</div>
+            ${custnick } 欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
 	                <a class="fl mr20 J_cart" href="#"><b class="orange-color"></b></a>
 	                <div id="J_newsFont" class="fl mr20 newsFont"><a href="#"><b class="orange-color H_newsNum"></b></a>

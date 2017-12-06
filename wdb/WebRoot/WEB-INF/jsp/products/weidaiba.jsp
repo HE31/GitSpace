@@ -11,9 +11,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>微你而生－深受欢迎的大学生信用分期平台</title>
+    <title>大学生信用生活服务平台－深受欢迎的大学生信用分期平台</title>
     <meta name="keywords" content="大学生分期、大学生分期付款、大学生分期购物">
-    <meta name="description" content="微你而生——大学生理想分期贷款服务平台">
+    <meta name="description" content="大学生信用生活服务平台——大学生理想分期贷款服务平台">
     <link rel="icon" href="../images/icon_wdb.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="../images/icon_wdb.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../css/base.css">
@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-           ${custnick }  欢迎来到微你而生</div>
+           ${custnick }  欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
                 <a class="fl mr20" href="/helpcenter.html" target="_blank">帮助中心</a>
                 <span class="fl mr20">咨询热线：888-8888-8888</span>
@@ -54,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="header-top">
             <div class="layout1200">
                 <div class="clearfix">
-                    <a class="fl header-logo" href="#" title="微你而生,大学生理想分期消费平台"></a>
+                    <a class="fl header-logo" href="#" title="大学生信用生活服务平台,大学生理想分期消费平台"></a>
                     <div class="fr header-search">
                         <form class="clearfix header-search-box" action="/search.html" method="get" target="_blank">
                             <input type="text" class="fl header-search-input" id="text" name="text" placeholder="同学们都在热搜 iphone6s" value="" />

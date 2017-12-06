@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            ${custnick},欢迎来到微你而生</div>
+            ${custnick},欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
                 <a class="fl mr20" href="${pageContext.request.contextPath }/customer/Personal.action" target="_blank">个人中心</a>
                 <span class="fl mr20">咨询热线：888-888-8888</span>
@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="header-top">
             <div class="layout1200">
                 <div class="clearfix">
-                    <a class="fl header-logo"  title="微你而生——大学生理想分期贷款服务平台"></a>
+                    <a class="fl header-logo"  title="大学生信用生活服务平台——大学生理想分期贷款服务平台"></a>
                     <div class="fr header-search">
                         <form class="clearfix header-search-box" action="${pageContext.request.contextPath }/products/productsSearch.action" method="post" target="_blank">
                             <input type="text" class="fl header-search-input" id="searchkey" name="searchkey" placeholder="同学们都在热搜 iphone6" value="">
@@ -333,7 +333,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="clearfix">
             <div class="fl bdLine">
                 <ul class="fl unit ml15" style="width:120px">
-                    <li class="first"><em>微你而生</em></li>
+                    <li class="first"><em>大学生信用生活服务平台</em></li>
                     <li><a href="#" target="_blank">关于我们</a></li>
                     <li><a href="#" target="_blank">加入我们</a></li>
                     <li><a href="#" target="_blank">联系我们</a></li>
@@ -370,7 +370,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
                    <div class="fl bdLine">
                 <ul class="fl unit ml30" style="width:175px">
-                   <li class="first"><em>手机微你而生</em></li>
+                   <li class="first"><em>手机大学生信用生活服务平台</em></li>
                     <li></li>
                     <li><a href="JavaScript:;" target="_blank"><img src="../images/ip_icon.jpg"></a></li>
                     <li><a href="http://www.weidaiba.com/download/app"><img src="../images/ad_icon.jpg"></a></li>

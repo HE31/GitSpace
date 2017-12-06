@@ -10,9 +10,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>微你而生－深受欢迎的大学生信用分期平台</title>
+    <title>大学生信用生活服务平台－深受欢迎的大学生信用分期平台</title>
     <meta name="keywords" content="大学生分期、大学生分期付款、大学生分期购物">
-    <meta name="description" content="微你而生——大学生理想分期贷款服务平台">
+    <meta name="description" content="大学生信用生活服务平台——大学生理想分期贷款服务平台">
    <link rel="icon" href="../images/icon_wdb.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="../images/icon_wdb.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../css/base.css">
@@ -35,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-         ${custnick }   欢迎来到微你而生</div>
+         ${custnick }   欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
                 <a class="fl mr20" href="/helpcenter.html" target="_blank">帮助中心</a>
                 <span class="fl mr20">咨询热线：888-8888-8888</span>
@@ -434,9 +434,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="clearfix">
             <div class="fl bdLine">
                 <ul class="fl unit ml15" style="width:120px">
-                    <li class="first"><em>微你而生</em></li>
-                    <li><a href="/aboutus.html" target="_blank">关于微你而生</a></li>
-                    <li><a href="/joinus.html" target="_blank">加入微你而生</a></li>
+                    <li class="first"><em>大学生信用生活服务平台</em></li>
+                    <li><a href="/aboutus.html" target="_blank">关于大学生信用生活服务平台</a></li>
+                    <li><a href="/joinus.html" target="_blank">加入大学生信用生活服务平台</a></li>
                     <li><a href="/contactus.html#mark1" target="_blank">联系我们</a></li>
                     <li><a href="/sitemap.html" target="_blank">网站地图</a></li>
                 </ul>
@@ -471,7 +471,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 
                    <div class="fl bdLine">
                 <ul class="fl unit ml30" style="width:175px">
-                   <li class="first"><em>手机微你而生</em></li>
+                   <li class="first"><em>手机大学生信用生活服务平台</em></li>
                     <li></li>
                     <li><a href="https://itunes.apple.com/cn/app/ai-xue-dai/id1029982187?mt=8" target="_blank"><img src="../images/ip_icon.jpg"></a></li>
                     <li><a href="/download/app"><img src="../images/ad_icon.jpg"></a></li>

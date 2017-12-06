@@ -38,7 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            欢迎来到微你而生</div>
+            欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
 	                <a class="fl mr20 J_cart" href="#"></a>
 	                <div id="J_newsFont" class="fl mr20 newsFont"></a>
@@ -81,8 +81,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </script>
  <div class="loginFoot tac">
         <p class="fs14 mb10">
-        <a class="mr15" href="#">关于微你而生</a><b class="splitline mr15"></b>
-        <a class="mr15" href="#">加入微你而生</a><b class="splitline mr15"></b>
+        <a class="mr15" href="#">关于大学生信用生活服务平台</a><b class="splitline mr15"></b>
+        <a class="mr15" href="#">加入大学生信用生活服务平台</a><b class="splitline mr15"></b>
         <a class="mr15" href="#">联系我们</a><b class="splitline mr15"></b>
         <a class="mr15" href="#">帮助中心</a><b class="splitline mr15"></b>
         <a>客服电话：888-888-8888</a></p>

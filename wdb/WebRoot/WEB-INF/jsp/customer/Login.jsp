@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>登录 － 微你而生——大学生理想分期贷款服务平台</title>
+    <title>登录 － 大学生信用生活服务平台——大学生理想分期贷款服务平台</title>
     <meta name="keywords" content="大学生分期、大学生分期付款、大学生分期购物">
-    <meta name="description" content="微你而生：大学生理想分期贷款服务平台">
+    <meta name="description" content="大学生信用生活服务平台：大学生理想分期贷款服务平台">
     <link rel="icon" href="../images/icon_wdb.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="../images/icon_wdb.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../css/base.css?t=20160321">
@@ -29,7 +29,7 @@
         <div class="header-top">
             <div class="layout1200">
                 <div class="clearfix">
-                    <a title="微你而生——大学生理想分期贷款服务平台" href="/" class="fl header-logo"></a><img src="../images/welcomlog.png">
+                    <a title="大学生信用生活服务平台——大学生理想分期贷款服务平台" href="/" class="fl header-logo"></a><img src="../images/welcomlog.png">
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
     <div class="logBox">
         <div class="loglay pr">
             <div class="logFram">
-                <h3 class="fs18">登录微你而生</h3>
+                <h3 class="fs18">登录大学生信用生活服务平台</h3>
                 <div class="logItem">
                     <p class="logTip"></p>
                      <form action="${pageContext.request.contextPath }/customer/LoginCheck.action" method="post" id="logform">
@@ -61,8 +61,8 @@
 		
  <div class="loginFoot tac">
         <p class="fs14 mb10">
-        <a class="mr15" href="/aboutus.html">关于微你而生</a><b class="splitline mr15"></b>
-        <a class="mr15" href="/joinus.html">加入微你而生</a><b class="splitline mr15"></b>
+        <a class="mr15" href="/aboutus.html">关于大学生信用生活服务平台</a><b class="splitline mr15"></b>
+        <a class="mr15" href="/joinus.html">加入大学生信用生活服务平台</a><b class="splitline mr15"></b>
         <a class="mr15" href="/contactus.html">联系我们</a><b class="splitline mr15"></b>
         <a class="mr15" href="/helpcenter.html">帮助中心</a><b class="splitline mr15"></b>
         <a>客服电话：888-8888-8888</a></p>

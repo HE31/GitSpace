@@ -79,7 +79,7 @@ function prosub(){
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            ${custnick },欢迎来到微你而生</div>
+            ${custnick },欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
                 <a class="fl mr20" href="/helpcenter.html" target="_blank">帮助中心</a>
                 <span class="fl mr20">咨询热线：***-***-****</span>
@@ -303,7 +303,7 @@ $(function(){
                         <div class="fl what-xin">
                             <a class="mr30 eleb mt5 hstate"><img src="../images/xinApay.png"></a>
                             <div class="fl xindec"><i></i>
-                                <p class="tipcont">信用支付是微你而生提供给消费者“这月买、下月还”的信用消费服务。
+                                <p class="tipcont">信用支付是大学生信用生活服务平台提供给消费者“这月买、下月还”的信用消费服务。
                                     <br>产品特点：
                                     <br>1.当月买，下月再还款，分期消费无压力
                                     <br>2.免费使用消费额度购物
@@ -469,9 +469,9 @@ $(function(){
             <div class="clearfix">
             <div class="fl bdLine">
                 <ul class="fl unit ml15" style="width:120px">
-                    <li class="first"><em>微你而生</em></li>
-                    <li><a href="/aboutus.html" target="_blank">关于微你而生</a></li>
-                    <li><a href="/joinus.html" target="_blank">加入微你而生 </a></li>
+                    <li class="first"><em>大学生信用生活服务平台</em></li>
+                    <li><a href="/aboutus.html" target="_blank">关于大学生信用生活服务平台</a></li>
+                    <li><a href="/joinus.html" target="_blank">加入大学生信用生活服务平台 </a></li>
                     <li><a href="/contactus.html#mark1" target="_blank">联系我们</a></li>
                     <li><a href="/sitemap.html" target="_blank">网站地图</a></li>
                 </ul>
@@ -506,7 +506,7 @@ $(function(){
                 </div>
                    <div class="fl bdLine">
                 <ul class="fl unit ml30" style="width:175px">
-                   <li class="first"><em>手机微你而生</em></li>
+                   <li class="first"><em>手机大学生信用生活服务平台</em></li>
                     <li></li>
                     <li><a href="https://itunes.apple.com/cn/app/ai-xue-dai/id1029982187?mt=8" target="_blank"><img src="../images/ip_icon.jpg"></a></li>
                     <li><a href="/download/app"><img src="../images/ad_icon.jpg"></a></li>

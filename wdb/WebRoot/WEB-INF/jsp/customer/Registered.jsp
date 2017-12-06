@@ -32,7 +32,7 @@ span{
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-            欢迎来到微你而生</div>
+            欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
                 <a class="fl mr20" href="#" target="_blank">帮助中心</a>
                 <span class="fl mr20">咨询热线：888-888-8888</span>
@@ -45,7 +45,7 @@ span{
         <div class="header-top">
             <div class="layout1200">
                 <div class="clearfix">
-                    <a title="微你而生——大学生理想分期贷款服务平台" href="" class="fl header-logo"></a><img src="../images/reglog.png" alt="注册用户">
+                    <a title="大学生信用生活服务平台——大学生理想分期贷款服务平台" href="" class="fl header-logo"></a><img src="../images/reglog.png" alt="注册用户">
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@ document.getElementById("zphone").onclick=function(){get_mobile_code(this);}
               
                 <p>
                     <label class="rgItemname">&nbsp;</label>
-                    <label class="checked" id="agree"></label>&nbsp;&nbsp;&nbsp;<span class="fs14">同意<a class="blue-color J_protocol" href="javascript:;">《微你而生用户注册协议》</a></span>
+                    <label class="checked" id="agree"></label>&nbsp;&nbsp;&nbsp;<span class="fs14">同意<a class="blue-color J_protocol" href="javascript:;">《大学生信用生活服务平台用户注册协议》</a></span>
                 </p>
                 
                 <p>

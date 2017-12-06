@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="clearfix header-help-tel">
         <div class="layout1200">
             <div class="fl fs12">
-           ${custnick } 欢迎来到微你而生</div>
+           ${custnick } 欢迎来到大学生信用生活服务平台</div>
             <div class="fr fs12">
 	                <a class="fl mr20 J_cart" href="#"></a>
 	                <div id="J_newsFont" class="fl mr20 newsFont"></a>
@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </tr>
   <tr>
     <td height="42"><a href="${pageContext.request.contextPath }/customer/Personal.action" class="common-btn orange inblock" >返回个人中心</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="${pageContext.request.contextPath }/products/productsList.action" class="mr30 blue-color aback fs14">去微你而生逛逛</a>
+    <a href="${pageContext.request.contextPath }/products/productsList.action" class="mr30 blue-color aback fs14">去大学生信用生活服务平台逛逛</a>
     </td>
   </tr>
 </table>
@@ -102,8 +102,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </script>
  <div class="loginFoot tac">
         <p class="fs14 mb10">
-        <a class="mr15" href="#">关于微你而生</a><b class="splitline mr15"></b>
-        <a class="mr15" href="#">加入微你而生</a><b class="splitline mr15"></b>
+        <a class="mr15" href="#">关于大学生信用生活服务平台</a><b class="splitline mr15"></b>
+        <a class="mr15" href="#">加入大学生信用生活服务平台</a><b class="splitline mr15"></b>
         <a class="mr15" href="#">联系我们</a><b class="splitline mr15"></b>
         <a class="mr15" href="#">帮助中心</a><b class="splitline mr15"></b>
         <a>客服电话：888-888-8888</a></p>
