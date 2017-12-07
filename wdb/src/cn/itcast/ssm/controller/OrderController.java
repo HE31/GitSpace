@@ -46,7 +46,7 @@ public class OrderController {
 			Integer hasfirstpay, Integer times,
 			WdbProductsQueryVo wdbProductsQueryVo) throws Exception {
 		customerid = (Integer) session.getAttribute("customerid");
-		// »ñÈ¡hiddenÔÚÉÌÆ·ÏêÇéÒ³ÃæµÄÉÌÆ·±àºÅ
+		// ï¿½ï¿½È¡hiddenï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
 		productnumber = Integer.valueOf(request.getParameter("productnumber"));
 		WdbProductsCustom wdbProductsCustom = productsService
 				.findProductsByProductNumber(productnumber);
@@ -57,8 +57,8 @@ public class OrderController {
 		
 		
 		
-		// »ñÈ¡ÉÌÆ·ÊôÐÔ´óÀà
-		/*char c = '£»';
+		// ï¿½ï¿½È¡ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½
+		/*char c = 'ï¿½ï¿½';
 		int num = 0;
 		String detail = "";
 		
@@ -67,18 +67,18 @@ public class OrderController {
 				num++;
 		}*/
 
-		// »ñÈ¡ÓÃ»§Ñ¡ÔñµÄÊôÐÔ,²¢¸ù¾ÝÊôÐÔ²éÑ¯Êý¾Ý¿â·ûºÏµÄÉÌÆ·
+		// ï¿½ï¿½È¡ï¿½Ã»ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½Ñ¯ï¿½ï¿½Ý¿ï¿½ï¿½Ïµï¿½ï¿½ï¿½Æ·
 		/*for (int i = 0; i < num + 1; i++) {
 
 			if (i < num) {
-				detail = detail + request.getParameter("type" + i) + "£¬";
+				detail = detail + request.getParameter("type" + i) + "ï¿½ï¿½";
 
 			} else {
 				detail = detail + request.getParameter("type" + i);
 			}
 			System.out.println(request.getParameter("type" + i) + "");
 			System.out.println(detail);
-			System.out.println("ÊôÐÔ³¤¶È£º"+productnumber);
+			System.out.println("ï¿½ï¿½ï¿½Ô³ï¿½ï¿½È£ï¿½"+productnumber);
 		}*/
 		   
 		//detail=request.getParameter("thr");
@@ -98,12 +98,12 @@ public class OrderController {
 					.findProductsListByDetail(wdbProductsQueryVo);
 			
 		}
-		// ¸ù¾ÝÓÃ»§Ñ¡ÔñµÄÊôÐÔÉ¸Ñ¡µÄÉÌÆ··ÅÈësession
+		// ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¸Ñ¡ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½session
 		session.setAttribute("productnumber",
 				wdbProductsCustom1.getProductnumber());
-		System.out.println(wdbProductsCustom1.getProductdescription()+"°¢Èøìªìª");
+		System.out.println(wdbProductsCustom1.getProductdescription()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		
-		//¼ÆËã·ÖÆÚ¼Û¸ñ¼°Ê×¸¶½ð¶î£¬ÓÃÓÚÓÃ»§ÏÂµ¥È·ÈÏ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼Û¸ï¿½ï¿½×¸ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Âµï¿½È·ï¿½ï¿½
 		DecimalFormat df  = new DecimalFormat("###0.00");
 		String repayment=df.format((wdbProductsCustom1.getQuotoprice() - hasfirstpay
 				* wdbProductsCustom.getQuotoprice() / 10)*1.12
@@ -112,9 +112,9 @@ public class OrderController {
 				* wdbProductsCustom1.getQuotoprice() / 10);
 		session.setAttribute("repayment",repayment);
 		session.setAttribute("firstpay",firstpay);
-		System.out.println("Ê×¸¶½ð¶î"+firstpay);
+		System.out.println("ï¿½×¸ï¿½ï¿½ï¿½ï¿½"+firstpay);
 
-		// ÉèÖÃgoodsid session£¬·½±ãÓÐÊ×¸¶Ê±¸¶¿î·½·¨ÖÐÖØÐÂ²éÕÒÉÌÆ·ÐÅÏ¢
+		// ï¿½ï¿½ï¿½ï¿½goodsid sessionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¸ï¿½Ê±ï¿½ï¿½ï¿½î·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½Ï¢
 		if (hasfirstpay != null) {
 			session.setAttribute("hasfirstpay", hasfirstpay);
 			session.setAttribute("times", times);
@@ -125,7 +125,7 @@ public class OrderController {
 		WdbCustomersCustom wdbCustomersCustom = customersService
 				.findCustomerById(customerid);
 
-		// ½«goodsid·ÅÈësessionÒÔ±ã¿çÒ³Ãæ´«µ½createStageSubmit·½·¨ÖÐ
+		// ï¿½ï¿½goodsidï¿½ï¿½ï¿½ï¿½sessionï¿½Ô±ï¿½ï¿½Ò³ï¿½æ´«ï¿½ï¿½createStageSubmitï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		session.setAttribute("productdescription",
 				request.getParameter("productdescription"));
 		model.addAttribute("wdbCustomersCustom", wdbCustomersCustom);
@@ -165,13 +165,13 @@ public class OrderController {
 			Integer productnumber) throws Exception {
 
 		customerid = (Integer) session.getAttribute("customerid");
-		// »ñÈ¡goodDetailÒ³Ãæ´«ÊäµÄsession firetpayºÍtimes
+		// ï¿½ï¿½È¡goodDetailÒ³ï¿½æ´«ï¿½ï¿½ï¿½session firetpayï¿½ï¿½times
 		hasfirstpay = (Integer) session.getAttribute("hasfirstpay");
 		times = (Integer) session.getAttribute("times");
-		// »ñÈ¡insertStageÖÐµÄproductnumber£»
+		// ï¿½ï¿½È¡insertStageï¿½Ðµï¿½productnumberï¿½ï¿½
 		productnumber = (Integer) session.getAttribute("productnumber");
-		System.out.println("ÉÌÆ·ID" + productnumber);
-		// ½«session»ñµÃµÄformÖµÔÝÊ±Ð´ÈëstageServiceImpl
+		System.out.println("ï¿½ï¿½Æ·ID" + productnumber);
+		// ï¿½ï¿½sessionï¿½ï¿½Ãµï¿½formÖµï¿½ï¿½Ê±Ð´ï¿½ï¿½stageServiceImpl
 		wdbOrdersCustom.setTimes(times);
 
 		wdbOrdersCustom.setProductnumber(productnumber);
@@ -180,24 +180,24 @@ public class OrderController {
 				.findCustomerById(customerid);
 		WdbProductsCustom wdbProductsCustom = productsService
 				.findProductsByProductNumber(productnumber);
-		// ¼ÆËãÊ×¸¶
+		// ï¿½ï¿½ï¿½ï¿½ï¿½×¸ï¿½
 		wdbOrdersCustom.setHasfirstpay(hasfirstpay
 				* wdbProductsCustom.getQuotoprice() / 10);
-		// ¼ÆËãÃ¿ÆÚÓ¦»¹½ð¶î
+		// ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½
 		wdbOrdersCustom
 				.setRepayment((float) ((wdbProductsCustom.getQuotoprice() - hasfirstpay
 						* wdbProductsCustom.getQuotoprice() / 10)*1.12
 						/ times));
-		System.out.println("ÓÃ»§id" + customerid);
-		System.out.println("Ò³Ãæ´«ÖµÃÜÂë£º" + pwd2);
+		System.out.println("ï¿½Ã»ï¿½id" + customerid);
+		System.out.println("Ò³ï¿½æ´«Öµï¿½ï¿½ï¿½ë£º" + pwd2);
 
-		System.out.println("Ê×¸¶:" + hasfirstpay);
+		System.out.println("ï¿½×¸ï¿½:" + hasfirstpay);
 
 		String Ordernumber = wdbOrdersCustom.getOrdernumber();
 		wdbRepayments.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setRepaystatus(0);
-		// stages±íÖÐ¼ÆËãÃ¿ÆÚÓ¦»¹½ð¶î
+		// stagesï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½
 		wdbStagesCustom
 				.setMoney((float) ((wdbProductsCustom.getQuotoprice() - hasfirstpay
 						* wdbProductsCustom.getQuotoprice() / 10)*1.12
@@ -205,14 +205,14 @@ public class OrderController {
 
 		int c = wdbCustomersCustom.getCustcreditrest();
 		int C = c - 200;
-		// ÏÂµ¥³É¹¦£¬¿Û³ýÏàÓ¦ÒýÓÃ¶î¶È
+		// ï¿½Âµï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Û³ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½
 		if (hasfirstpay == 0
 				|| pwd2.equals(wdbCustomersCustom.getCustdealpwd())) {
 			wdbCustomersCustom.setCustcreditrest(C);
 
 			ordersService.insertOrders(wdbOrdersCustom, wdbRepayments,
 					wdbCustomersCustom, wdbStagesCustom);
-			// Ò³Ãæ×ª·¢
+			// Ò³ï¿½ï¿½×ªï¿½ï¿½
 			return "redirect:/order/ordersucc.action";
 		} else {
 
@@ -232,10 +232,10 @@ public class OrderController {
 			Integer productnumber) throws Exception {
 
 		customerid = (Integer) session.getAttribute("customerid");
-		// »ñÈ¡goodDetailÒ³Ãæ´«ÊäµÄsession firetpayºÍtimes
+		// ï¿½ï¿½È¡goodDetailÒ³ï¿½æ´«ï¿½ï¿½ï¿½session firetpayï¿½ï¿½times
 		loan=Float.parseFloat(request.getParameter("loan"));
 		times = Integer.valueOf(request.getParameter("times"));
-		// »ñÈ¡insertStageÖÐµÄproductnumber£»
+		// ï¿½ï¿½È¡insertStageï¿½Ðµï¿½productnumberï¿½ï¿½
 		System.out.println(loan+"%%%%");
 		List<WdbProductsCustom> wdbProductsList=productsService.findProductsType(10);
 		System.out.println(wdbProductsList.get(0).getQuotoprice()+"$$$$$");
@@ -246,15 +246,15 @@ public class OrderController {
 			 products = (WdbProductsCustom) it.next();
 			
 			 if(products.getQuotoprice().equals(loan)){
-				 System.out.println(products.getQuotoprice()+"£¤£¤£¤£¤£¤£¤£¤£¤£¤");
+				 System.out.println(products.getQuotoprice()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 				 productnumber =products.getProductnumber(); 
-				 System.out.println("ÉÌÆ·ID" + productnumber);
+				 System.out.println("ï¿½ï¿½Æ·ID" + productnumber);
 		 }
 
 		}
 		
-		System.out.println("ÉÌÆ·ID" + productnumber);
-		// ½«session»ñµÃµÄformÖµÔÝÊ±Ð´ÈëstageServiceImpl
+		System.out.println("ï¿½ï¿½Æ·ID" + productnumber);
+		// ï¿½ï¿½sessionï¿½ï¿½Ãµï¿½formÖµï¿½ï¿½Ê±Ð´ï¿½ï¿½stageServiceImpl
 		wdbOrdersCustom.setTimes(times);
 
 		wdbOrdersCustom.setProductnumber(productnumber);
@@ -264,26 +264,26 @@ public class OrderController {
 				.findCustomerById(customerid);
 		WdbProductsCustom wdbProductsCustom = productsService
 				.findProductsByProductNumber(productnumber);
-		// ¼ÆËãÊ×¸¶
+		// ï¿½ï¿½ï¿½ï¿½ï¿½×¸ï¿½
 		wdbOrdersCustom.setHasfirstpay((float) 0.00);
-		// ¼ÆËãÃ¿ÆÚÓ¦»¹½ð¶î
+		// ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½
 		wdbOrdersCustom
 				.setRepayment((wdbProductsCustom.getQuotoprice() )
 						/ times);
-		System.out.println("ÓÃ»§id" + customerid);
-		System.out.println("Ò³Ãæ´«ÖµÃÜÂë£º" + pwd2);
+		System.out.println("ï¿½Ã»ï¿½id" + customerid);
+		System.out.println("Ò³ï¿½æ´«Öµï¿½ï¿½ï¿½ë£º" + pwd2);
 
 	
 		String Ordernumber = wdbOrdersCustom.getOrdernumber();
 		wdbRepayments.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setRepaystatus(0);
-		// stages±íÖÐ¼ÆËãÃ¿ÆÚÓ¦»¹½ð¶î
+		// stagesï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½
 		wdbStagesCustom.setMoney((float) ((wdbProductsCustom.getQuotoprice()*1.005)/ times));
 
 		int c = wdbCustomersCustom.getCustcreditrest();
 		int C = c - 200;
-		// ÏÂµ¥³É¹¦£¬¿Û³ýÏàÓ¦ÒýÓÃ¶î¶È
+		// ï¿½Âµï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Û³ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½
 		
 			wdbCustomersCustom.setCustcreditrest(C);
 
@@ -342,9 +342,9 @@ public class OrderController {
 		/*List<WdbOrdersQueryVo> wdbOrdersQueryVo =  ordersService
 			.findOrdersByCustomerId(customerid);
 	
-		//ÅÐ¶ÏÊÇ·ñÓÐ¶àÌõ¶©µ¥
+		//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if(wdbOrdersQueryVo.size()>0){
-			//ÅÐ¶ÏÇ°ºóÁ½Ìõ¶©µ¥ºÅÊÇ·ñÏàÍ¬
+			//ï¿½Ð¶ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Í¬
 		
 					int lefttime =  wdbOrdersQueryVo.get(0).getTimes()-wdbOrdersQueryVo.get(0).getWdbStagesCustom().getTime()+1;
 		model.addAttribute("lefttime",lefttime);
@@ -362,11 +362,11 @@ public class OrderController {
 	}
 	*/
 	int count=ordersService.findOrderCountByCustomerId(customerid, ordernumber);
-	System.out.println(count+"Î´»¹¿î¶©µ¥");
+	System.out.println(count+"Î´ï¿½ï¿½ï¿½î¶©ï¿½ï¿½");
 		
-			//ÅÐ¶ÏÊÇ·ñÓÐ¶àÌõ¶©µ¥
+			//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(count!=0){
-				//ÅÐ¶ÏÇ°ºóÁ½Ìõ¶©µ¥ºÅÊÇ·ñÏàÍ¬
+				//ï¿½Ð¶ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Í¬
 				WdbOrdersQueryVo wdbOrdersQueryVo =  ordersService
 						.findOrderByCustomerIdAndOrderNumber(customerid, ordernumber);
 						int lefttime =  wdbOrdersQueryVo.getTimes()-wdbOrdersQueryVo.getWdbStagesCustom().getTime()+1;
@@ -399,7 +399,7 @@ public class OrderController {
 	public String overdue(String ordernumber,Model model)throws Exception{
 		
 		model.addAttribute("ordernumber",ordernumber);
-		System.out.println(ordernumber+"ÓâÆÚ¶©µ¥±àºÅ");
+		System.out.println(ordernumber+"ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		
 		return"order/overdue";
 		
@@ -419,10 +419,10 @@ public class OrderController {
 		
 	duekey=request.getParameter("duekey");
 		
-		System.out.println("Ô¤ÆÚÊ±¼ä£º"+duekey);
+		System.out.println("Ô¤ï¿½ï¿½Ê±ï¿½ä£º"+duekey);
 		stagesService.updateStagesForOverdue(ordernumber, duekey);
-		//ÓâÆÚÉêÇëÌá½»ºó£¬¹Ø±Õ×Ó´°¿Úµ¯´°£¬Ë¢ÐÂ¸¸´°¿Ú
-		model.addAttribute("refresh","Ë¢ÐÂºóµÄÒ³Ãæ"+duekey);
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á½»ï¿½ó£¬¹Ø±ï¿½ï¿½Ó´ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½Â¸ï¿½ï¿½ï¿½ï¿½ï¿½
+		model.addAttribute("refresh","Ë¢ï¿½Âºï¿½ï¿½Ò³ï¿½ï¿½"+duekey);
 		  PrintWriter out = response.getWriter();  
 	        out.print("<script>window.parent.location.href='../customer/Personal.action?duekey="+duekey+"';</script>");  
 	        out.flush();

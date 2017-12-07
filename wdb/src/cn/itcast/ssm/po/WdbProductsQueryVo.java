@@ -5,7 +5,7 @@ import java.util.List;
 public class WdbProductsQueryVo {
 private WdbProducts wdbProducts;
 private WdbProductsCustom wdbProductsCustom;
-//批量商品信息
+//锟斤拷锟斤拷锟斤拷品锟斤拷息
 	private List<WdbProductsCustom> productList;
 	public WdbProducts getWdbProducts() {
 		return wdbProducts;
@@ -43,5 +43,12 @@ private WdbProductsCustom wdbProductsCustom;
 	}
 	public void setSearchkey(String searchkey) {
 		this.searchkey = searchkey;
+	}
+	@Override
+	public String toString() {
+		return "WdbProductsQueryVo [wdbProducts=" + wdbProducts
+				+ ", wdbProductsCustom=" + wdbProductsCustom + ", productList="
+				+ productList + ", detail=" + detail + ", searchkey="
+				+ searchkey + "]";
 	}
 }

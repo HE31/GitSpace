@@ -1,3 +1,4 @@
+
 package cn.itcast.ssm.controller;
 
 import java.io.File;
@@ -28,17 +29,17 @@ import cn.itcast.ssm.util.Page;
 
 
 @Controller
-//¶¨Òå¸ùÂ·¾¶
+//å®šä¹‰æ ¹è·¯å¾„
 @RequestMapping("/products")
 public class GoodsController {
 	@Autowired
 	private ProductsService productsService;
-	//Ò»°ã½¨Òé½«·½·¨ÃûºÍURLĞ´³ÉÒ»ÖÂ£¬·½±ãÎ¬»¤
-		//@RequestMapping½«·½·¨ºÍURL½øĞĞÓ³Éä£¬Ò»¸ö·½·¨¶ÔÓ¦Ò»¸öURL
+	//ä¸€èˆ¬å»ºè®®å°†æ–¹æ³•åå’ŒURLå†™æˆä¸€è‡´ï¼Œæ–¹ä¾¿ç»´æŠ¤
+		//@RequestMappingå°†æ–¹æ³•å’ŒURLè¿›è¡Œæ˜ å°„ï¼Œä¸€ä¸ªæ–¹æ³•å¯¹åº”ä¸€ä¸ªURL
 		@RequestMapping("/productsList")
-		//ÉÌÆ·²éÑ¯ÁĞ±í
+		//å•†å“æŸ¥è¯¢åˆ—è¡¨
 		public ModelAndView productsList(HttpServletRequest request,WdbProductsQueryVo wdbProductsQueryVo,Integer categoryid)throws Exception{
-	//System.out.println(goodstype+"ÉÌÆ·ÀàĞÍ+++");
+	//System.out.println(goodstype+"å•†å“ç±»å‹+++");
 			
 	
 			List<WdbProductsCustom> productsTypeList=productsService.findProductsType(categoryid);
@@ -50,12 +51,12 @@ public class GoodsController {
 			
 				 return modelAndView1;
 			}else{
-				//·µ»ØModelAndView
+				//è¿”å›ModelAndView
 				ModelAndView modelAndView=new ModelAndView();
-				//Ïàµ± ÓÚrequestµÄsetAttribut£¬ÔÚjspÒ³ÃæÖĞÍ¨¹ıitemsListÈ¡Êı¾İ
+				//ç›¸å½“ äºrequestçš„setAttributï¼Œåœ¨jspé¡µé¢ä¸­é€šè¿‡itemsListå–æ•°æ®
 				//modelAndView.addObject("goodsList", goodsList);
 			
-				//·ÖÒ³´úÂë
+				//åˆ†é¡µä»£ç 
 				String strPage = request.getParameter("page");
 				Integer page = 1;
 				Integer rows = 8;
@@ -64,13 +65,13 @@ public class GoodsController {
 				Integer count= productsService.findProductsList(wdbProductsQueryVo).size();
 				List<WdbProductsCustom> productList=productsService.findProductsListPage(wdbProductsQueryVo,(page-1)*rows, rows);
 				
-				System.out.println(count+"×ÜÌõÊı");
+				System.out.println(count+"æ€»æ¡æ•°");
 				modelAndView.addObject("page",new Page(page,rows,count,productList));
-				System.out.println(new Page(page,rows,count,productList).toString()+"·ÖÒ³");
-				//·ÖÒ³url²ÎÊı´¦Àí
+				System.out.println(new Page(page,rows,count,productList).toString()+"åˆ†é¡µ");
+				//åˆ†é¡µurlå‚æ•°å¤„ç†
 				Map<String, String[]> map = request.getParameterMap();
 				String str = CoreUtils.formatUrl(map);
-				//Ö¸¶¨ÊÓÍ¼
+				//æŒ‡å®šè§†å›¾
 				modelAndView.addObject("strParam",str);
 				modelAndView.setViewName("products/productsList");
 				
@@ -83,13 +84,13 @@ public class GoodsController {
 		
 		
 		
-		/**ÉÌÆ·²éÑ¯**/
+		/**å•†å“æŸ¥è¯¢**/
 		@RequestMapping("/productsList2")
-		//ÉÌÆ·²éÑ¯ÁĞ±í
+		//å•†å“æŸ¥è¯¢åˆ—è¡¨
 		public ModelAndView productsList2(HttpServletRequest request,WdbProductsQueryVo wdbProductsQueryVo,Integer categoryid)throws Exception{
-	//System.out.println(goodstype+"ÉÌÆ·ÀàĞÍ+++");
+	//System.out.println(goodstype+"å•†å“ç±»å‹+++");
 			
-		//µ÷ÓÃservice²éÕÒ Êı¾İ¿â£¬²éÑ¯ÉÌÆ·ÁĞ±í£¬ÕâÀïÊ¹ÓÃ¶¯Ì¬
+		//è°ƒç”¨serviceæŸ¥æ‰¾ æ•°æ®åº“ï¼ŒæŸ¥è¯¢å•†å“åˆ—è¡¨ï¼Œè¿™é‡Œä½¿ç”¨åŠ¨æ€
 			List<WdbProductsCustom> productsList = productsService.findProductsList(wdbProductsQueryVo);
 			List<WdbProductsCustom> productsTypeList=productsService.findProductsType(categoryid);
 			if(categoryid!=null){
@@ -98,11 +99,11 @@ public class GoodsController {
 				modelAndView1.setViewName("products/productsList2");
 				 return modelAndView1;
 			}else{
-				//·µ»ØModelAndView
+				//è¿”å›ModelAndView
 				ModelAndView modelAndView=new ModelAndView();
-				//Ïàµ± ÓÚrequestµÄsetAttribut£¬ÔÚjspÒ³ÃæÖĞÍ¨¹ıitemsListÈ¡Êı¾İ
+				//ç›¸å½“ äºrequestçš„setAttributï¼Œåœ¨jspé¡µé¢ä¸­é€šè¿‡itemsListå–æ•°æ®
 				modelAndView.addObject("productsList", productsList);
-				//Ö¸¶¨ÊÓÍ¼
+				//æŒ‡å®šè§†å›¾
 				modelAndView.setViewName("products/productsList2");
 				
 	 return modelAndView;
@@ -114,26 +115,26 @@ public class GoodsController {
 		
 		
 		
-		//¹ÜÀíÒ³Ãæ²éÑ¯ÁĞ±í
+		//ç®¡ç†é¡µé¢æŸ¥è¯¢åˆ—è¡¨
 		@RequestMapping("/manageproducts")
-		//ÉÌÆ·²éÑ¯ÁĞ±í
+		//å•†å“æŸ¥è¯¢åˆ—è¡¨
 		public ModelAndView manageProducts(HttpServletRequest request,WdbProductsQueryVo wdbProductsQueryVo)throws Exception{
 			
 			
-		//µ÷ÓÃservice²éÕÒ Êı¾İ¿â£¬²éÑ¯ÉÌÆ·ÁĞ±í£¬ÕâÀïÊ¹ÓÃ¶¯Ì¬
+		//è°ƒç”¨serviceæŸ¥æ‰¾ æ•°æ®åº“ï¼ŒæŸ¥è¯¢å•†å“åˆ—è¡¨ï¼Œè¿™é‡Œä½¿ç”¨åŠ¨æ€
 			List<WdbProductsCustom> productsList = productsService.findProductsList(wdbProductsQueryVo);
 			
 			
-			//·µ»ØModelAndView
+			//è¿”å›ModelAndView
 			ModelAndView modelAndView=new ModelAndView();
-			//Ïàµ± ÓÚrequestµÄsetAttribut£¬ÔÚjspÒ³ÃæÖĞÍ¨¹ıitemsListÈ¡Êı¾İ
+			//ç›¸å½“ äºrequestçš„setAttributï¼Œåœ¨jspé¡µé¢ä¸­é€šè¿‡itemsListå–æ•°æ®
 			modelAndView.addObject("productsList", productsList);
 			
-			//Ö¸¶¨ÊÓÍ¼
+			//æŒ‡å®šè§†å›¾
 			modelAndView.setViewName("products/manageProducts");
 			
 			
-			//·ÖÒ³
+			//åˆ†é¡µ
 			String strPage = request.getParameter("page");
 			Integer page = 1;
 			Integer rows = 8;
@@ -147,7 +148,7 @@ public class GoodsController {
 			System.out.println(count);
 			modelAndView.addObject("page",new Page(page,rows,count,productList));
 			System.out.println(new Page(page,rows,count,productList));
-			//·ÖÒ³url²ÎÊı´¦Àí
+			//åˆ†é¡µurlå‚æ•°å¤„ç†
 			Map<String, String[]> map = request.getParameterMap();
 			String str = CoreUtils.formatUrl(map);
 			
@@ -163,40 +164,40 @@ public class GoodsController {
 		
 			WdbProductsCustom wdbsProductsCustom=productsService.findProductsByProductNumber(productnumber);
 		
-			//Ö¸¶¨ÊÓÍ¼
+			//æŒ‡å®šè§†å›¾
 			model.addAttribute("productsCustom",wdbsProductsCustom);
 	        return "products/editProducts";
 	 }
 		
 		
-		//ÉÌÆ·ĞÅÏ¢ĞŞ¸ÄÌá½»
+		//å•†å“ä¿¡æ¯ä¿®æ”¹æäº¤
 		@RequestMapping("/editProductsSubmit")
 		public String editProductsSubmit(HttpServletRequest request,Integer productnumber,WdbProductsCustom wdbProductsCustom,
-				MultipartFile products_images//½ÓÊÕÉÌÆ·Í¼Æ¬
+				MultipartFile products_images//æ¥æ”¶å•†å“å›¾ç‰‡
 				)throws Exception{
 			
-			//»ñÈ¡µ±Ç°ÏµÍ³Ê±¼ä
+			//è·å–å½“å‰ç³»ç»Ÿæ—¶é—´
 			GetDate GD=new GetDate();
 		  
-			//Ô­Ê¼Ãû³Æ
+			//åŸå§‹åç§°
 			String originalFilename = products_images.getOriginalFilename();
-			//ÉÏ´«Í¼Æ¬
+			//ä¸Šä¼ å›¾ç‰‡
 		   if(products_images!=null && originalFilename!=null && originalFilename.length()>0){
 
-				//´æ´¢Í¼Æ¬µÄÎïÀíÂ·¾¶
+				//å­˜å‚¨å›¾ç‰‡çš„ç‰©ç†è·¯å¾„
 				String pic_path = "D:\\JSP\\wdb\\WdbUpload\\temp\\";
 				
 				
-				//ĞÂµÄÍ¼Æ¬Ãû³Æ
-				// UUID.randomUUID()Ëæ»úÃüÃûĞÂÍ¼Æ¬
+				//æ–°çš„å›¾ç‰‡åç§°
+				// UUID.randomUUID()éšæœºå‘½åæ–°å›¾ç‰‡
 				//String newFileName = GD.getNow()+UUID.randomUUID() + originalFilename.substring(originalFilename.lastIndexOf("."));
 				String newFileName =  originalFilename;
 				File newFile = new File(pic_path+newFileName);
 				
-				//½«ÄÚ´æÖĞµÄÊı¾İĞ´Èë´ÅÅÌ
+				//å°†å†…å­˜ä¸­çš„æ•°æ®å†™å…¥ç£ç›˜
 				products_images.transferTo(newFile);
 				
-				//½«ĞÂÍ¼Æ¬Ãû³ÆĞ´µ½itemsCustomÖĞ
+				//å°†æ–°å›¾ç‰‡åç§°å†™åˆ°itemsCustomä¸­
 				wdbProductsCustom.setImageurls(newFileName);
 			}
 		   productsService.updateProducts(productnumber,wdbProductsCustom);
@@ -212,7 +213,7 @@ public class GoodsController {
 		
 				
 				@RequestMapping("/productsDetailed")
-				//ÉÌÆ·²éÑ¯ÁĞ±í
+				//å•†å“æŸ¥è¯¢åˆ—è¡¨
 				public String ProductsDetailed(HttpSession session,HttpServletRequest request,Integer productnumber,Model model,
 						Integer firstpay,Integer times)throws Exception{
 					
@@ -227,38 +228,38 @@ public class GoodsController {
 		Map<String, Object> type = new LinkedHashMap<String, Object>();
 		
 		if (wdbCategories.getCategorydescription() != null) {
-         //»ñÈ¡ÉÌÆ·ÊôĞÔ´óÀà
-			String[] attrs = wdbCategories.getCategorydescription().split("£»");
+         //è·å–å•†å“å±æ€§å¤§ç±»
+			String[] attrs = wdbCategories.getCategorydescription().split("ï¼›");
 			for (int i =0; i <attrs.length; i++) {
 				
-				String[] attr = attrs[i].split("£¬");
+				String[] attr = attrs[i].split("ï¼Œ");
 				List<String> list = new LinkedList<String>();
-				System.out.println(attrs[i] + "ÉÌÆ·ÊôĞÔ");
+				System.out.println(attrs[i] + "å•†å“å±æ€§");
 				
 				//attrdata.put("attr" + i, attrs[i]);
 				for(int k=1;k<attr.length;k++){
-			//½«Ã¿ÀàÉÌÆ·ÊôĞÔµÄ¿É¹©Ñ¡ÔñÊôĞÔ·ÅÈëlistÖĞ£»		
+			//å°†æ¯ç±»å•†å“å±æ€§çš„å¯ä¾›é€‰æ‹©å±æ€§æ”¾å…¥listä¸­ï¼›		
 			list.add(attr[k]);
 				}
 				//for (int j = 0; j < attrs.length; j++) {
-				//½«Ã¿ÀàÊôĞÔÍ¨¹ı¸ú¿ÉÑ¡ÊôĞÔ¶ÔÓ¦ÆğÀ´·ÅÈëLinkedHashMap
+				//å°†æ¯ç±»å±æ€§é€šè¿‡è·Ÿå¯é€‰å±æ€§å¯¹åº”èµ·æ¥æ”¾å…¥LinkedHashMap
 					type.put(attr[0],list);
 				
-					//.substring·Ö¸îµÚÒ»¸ö£¬ºóÃæµÄ×Ö·û´®
-					//	type.put(attr[0],attrs[i].substring(attrs[i].indexOf("£¬")+1));
+					//.substringåˆ†å‰²ç¬¬ä¸€ä¸ªï¼Œåé¢çš„å­—ç¬¦ä¸²
+					//	type.put(attr[0],attrs[i].substring(attrs[i].indexOf("ï¼Œ")+1));
 				//}			
 			}		
 			} 
 					   System.out.println(type.toString()+"type");
 						// System.out.println(list+"list");
-				//µ÷ÓÃservice²éÕÒ Êı¾İ¿â£¬²éÑ¯ÉÌÆ·ÁĞ±í£¬ÕâÀïÊ¹ÓÃ¶¯Ì¬
+				//è°ƒç”¨serviceæŸ¥æ‰¾ æ•°æ®åº“ï¼ŒæŸ¥è¯¢å•†å“åˆ—è¡¨ï¼Œè¿™é‡Œä½¿ç”¨åŠ¨æ€
 		
 		model.addAttribute("type",type);
 					String productname=wdbProductsCustom.getProductname();
-					System.out.println("ÉÌÆ·Ãû³Æ£º£º"+productname);
-					//¸ù¾İcategoryid»ñÈ¡ÉÌÆ·ÁĞ±í£¬ÓÃÓÚÔÚÇ°¶Ë±éÀúÌôÑ¡³ö·ûºÏÓÃ»§Ñ¡ÔñµÄÉÌÆ·
+					System.out.println("å•†å“åç§°ï¼šï¼š"+productname);
+					//æ ¹æ®categoryidè·å–å•†å“åˆ—è¡¨ï¼Œç”¨äºåœ¨å‰ç«¯éå†æŒ‘é€‰å‡ºç¬¦åˆç”¨æˆ·é€‰æ‹©çš„å•†å“
 					List<WdbProductsCustom> wdbProductsList=productsService.findProductsType(wdbProductsCustom.getCategoryid());
-					System.out.println("±éÀú³öµÄÉÌÆ·¼Û¸ñ"+wdbProductsList.get(0).getQuotoprice());
+					System.out.println("éå†å‡ºçš„å•†å“ä»·æ ¼"+wdbProductsList.get(0).getQuotoprice());
 				model.addAttribute("wdbProductsList",wdbProductsList);
 			 return "products/productsDetailed";
 
@@ -283,15 +284,15 @@ public class GoodsController {
 				}
 				
 				
-				/*Î¢´û¿î*/
+				/*å¾®è´·æ¬¾*/
 				@RequestMapping("/loan")
-				//ÉÌÆ·²éÑ¯ÁĞ±í
+				//å•†å“æŸ¥è¯¢åˆ—è¡¨
 				public String loan(HttpSession session,HttpServletRequest request,Integer productnumber,Model model,
 						Integer firstpay,Integer times)throws Exception{
 			
-					//¸ù¾İcategoryid»ñÈ¡ÉÌÆ·ÁĞ±í£¬´û¿îcategoryid=10
+					//æ ¹æ®categoryidè·å–å•†å“åˆ—è¡¨ï¼Œè´·æ¬¾categoryid=10
 					List<WdbProductsCustom> wdbProductsList=productsService.findProductsType(10);
-					System.out.println("±éÀú³öµÄÉÌÆ·¼Û¸ñ"+wdbProductsList.get(0).getQuotoprice());
+					System.out.println("éå†å‡ºçš„å•†å“ä»·æ ¼"+wdbProductsList.get(0).getQuotoprice());
 				model.addAttribute("wdbProductsList",wdbProductsList);
 			 return "products/loan";
 
@@ -304,16 +305,16 @@ public class GoodsController {
 				public ModelAndView train(WdbProductsQueryVo wdbProductsQueryVo)throws Exception {
 					List<WdbProductsCustom> productsList = productsService.findTravelList(wdbProductsQueryVo);
 					ModelAndView modelAndView=new ModelAndView();
-					//Ïàµ± ÓÚrequestµÄsetAttribut£¬ÔÚjspÒ³ÃæÖĞÍ¨¹ıitemsListÈ¡Êı¾İ
+					//ç›¸å½“ äºrequestçš„setAttributï¼Œåœ¨jspé¡µé¢ä¸­é€šè¿‡itemsListå–æ•°æ®
 					modelAndView.addObject("productsList", productsList);
-					//Ö¸¶¨ÊÓÍ¼
+					//æŒ‡å®šè§†å›¾
 					modelAndView.setViewName("products/train");
 				return modelAndView;	
 				}
 				
 				
 				@RequestMapping("/trainDetail")
-				//ÉÌÆ·²éÑ¯ÁĞ±í
+				//å•†å“æŸ¥è¯¢åˆ—è¡¨
 				public String trainDetail(HttpSession session,HttpServletRequest request,Integer productnumber,Model model
 						)throws Exception{
 					//productnumber=Integer.valueOf(request.getParameter("productnumber"));
