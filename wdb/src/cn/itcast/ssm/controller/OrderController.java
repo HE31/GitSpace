@@ -46,7 +46,7 @@ public class OrderController {
 			Integer hasfirstpay, Integer times,
 			WdbProductsQueryVo wdbProductsQueryVo) throws Exception {
 		customerid = (Integer) session.getAttribute("customerid");
-		// ��ȡhidden����Ʒ����ҳ�����Ʒ���
+		// 获取hidden在商品详情页面的商品编号
 		productnumber = Integer.valueOf(request.getParameter("productnumber"));
 		WdbProductsCustom wdbProductsCustom = productsService
 				.findProductsByProductNumber(productnumber);
@@ -57,8 +57,8 @@ public class OrderController {
 		
 		
 		
-		// ��ȡ��Ʒ���Դ���
-		/*char c = '��';
+		// 获取商品属性大类
+		/*char c = '；';
 		int num = 0;
 		String detail = "";
 		
@@ -67,18 +67,16 @@ public class OrderController {
 				num++;
 		}*/
 
-		// ��ȡ�û�ѡ�������,��������Բ�ѯ��ݿ��ϵ���Ʒ
+		// 获取用户选择的属性,并根据属性查询数据库符合的商品
 		/*for (int i = 0; i < num + 1; i++) {
-
 			if (i < num) {
-				detail = detail + request.getParameter("type" + i) + "��";
-
+				detail = detail + request.getParameter("type" + i) + "，";
 			} else {
 				detail = detail + request.getParameter("type" + i);
 			}
 			System.out.println(request.getParameter("type" + i) + "");
 			System.out.println(detail);
-			System.out.println("���Գ��ȣ�"+productnumber);
+			System.out.println("属性长度："+productnumber);
 		}*/
 		   
 		//detail=request.getParameter("thr");
@@ -98,12 +96,12 @@ public class OrderController {
 					.findProductsListByDetail(wdbProductsQueryVo);
 			
 		}
-		// ����û�ѡ�������ɸѡ����Ʒ����session
+		// 根据用户选择的属性筛选的商品放入session
 		session.setAttribute("productnumber",
 				wdbProductsCustom1.getProductnumber());
-		System.out.println(wdbProductsCustom1.getProductdescription()+"������");
+		System.out.println(wdbProductsCustom1.getProductdescription()+"阿萨飒飒");
 		
-		//������ڼ۸��׸��������û��µ�ȷ��
+		//计算分期价格及首付金额，用于用户下单确认
 		DecimalFormat df  = new DecimalFormat("###0.00");
 		String repayment=df.format((wdbProductsCustom1.getQuotoprice() - hasfirstpay
 				* wdbProductsCustom.getQuotoprice() / 10)*1.12
@@ -112,9 +110,9 @@ public class OrderController {
 				* wdbProductsCustom1.getQuotoprice() / 10);
 		session.setAttribute("repayment",repayment);
 		session.setAttribute("firstpay",firstpay);
-		System.out.println("�׸����"+firstpay);
+		System.out.println("首付金额"+firstpay);
 
-		// ����goodsid session���������׸�ʱ����������²�����Ʒ��Ϣ
+		// 设置goodsid session，方便有首付时付款方法中重新查找商品信息
 		if (hasfirstpay != null) {
 			session.setAttribute("hasfirstpay", hasfirstpay);
 			session.setAttribute("times", times);
@@ -125,7 +123,7 @@ public class OrderController {
 		WdbCustomersCustom wdbCustomersCustom = customersService
 				.findCustomerById(customerid);
 
-		// ��goodsid����session�Ա��ҳ�洫��createStageSubmit������
+		// 将goodsid放入session以便跨页面传到createStageSubmit方法中
 		session.setAttribute("productdescription",
 				request.getParameter("productdescription"));
 		model.addAttribute("wdbCustomersCustom", wdbCustomersCustom);
@@ -165,13 +163,13 @@ public class OrderController {
 			Integer productnumber) throws Exception {
 
 		customerid = (Integer) session.getAttribute("customerid");
-		// ��ȡgoodDetailҳ�洫���session firetpay��times
+		// 获取goodDetail页面传输的session firetpay和times
 		hasfirstpay = (Integer) session.getAttribute("hasfirstpay");
 		times = (Integer) session.getAttribute("times");
-		// ��ȡinsertStage�е�productnumber��
+		// 获取insertStage中的productnumber；
 		productnumber = (Integer) session.getAttribute("productnumber");
-		System.out.println("��ƷID" + productnumber);
-		// ��session��õ�formֵ��ʱд��stageServiceImpl
+		System.out.println("商品ID" + productnumber);
+		// 将session获得的form值暂时写入stageServiceImpl
 		wdbOrdersCustom.setTimes(times);
 
 		wdbOrdersCustom.setProductnumber(productnumber);
@@ -180,24 +178,24 @@ public class OrderController {
 				.findCustomerById(customerid);
 		WdbProductsCustom wdbProductsCustom = productsService
 				.findProductsByProductNumber(productnumber);
-		// �����׸�
+		// 计算首付
 		wdbOrdersCustom.setHasfirstpay(hasfirstpay
 				* wdbProductsCustom.getQuotoprice() / 10);
-		// ����ÿ��Ӧ�����
+		// 计算每期应还金额
 		wdbOrdersCustom
 				.setRepayment((float) ((wdbProductsCustom.getQuotoprice() - hasfirstpay
 						* wdbProductsCustom.getQuotoprice() / 10)*1.12
 						/ times));
-		System.out.println("�û�id" + customerid);
-		System.out.println("ҳ�洫ֵ���룺" + pwd2);
+		System.out.println("用户id" + customerid);
+		System.out.println("页面传值密码：" + pwd2);
 
-		System.out.println("�׸�:" + hasfirstpay);
+		System.out.println("首付:" + hasfirstpay);
 
 		String Ordernumber = wdbOrdersCustom.getOrdernumber();
 		wdbRepayments.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setRepaystatus(0);
-		// stages���м���ÿ��Ӧ�����
+		// stages表中计算每期应还金额
 		wdbStagesCustom
 				.setMoney((float) ((wdbProductsCustom.getQuotoprice() - hasfirstpay
 						* wdbProductsCustom.getQuotoprice() / 10)*1.12
@@ -205,14 +203,14 @@ public class OrderController {
 
 		int c = wdbCustomersCustom.getCustcreditrest();
 		int C = c - 200;
-		// �µ��ɹ����۳���Ӧ���ö��
+		// 下单成功，扣除相应引用额度
 		if (hasfirstpay == 0
 				|| pwd2.equals(wdbCustomersCustom.getCustdealpwd())) {
 			wdbCustomersCustom.setCustcreditrest(C);
 
 			ordersService.insertOrders(wdbOrdersCustom, wdbRepayments,
 					wdbCustomersCustom, wdbStagesCustom);
-			// ҳ��ת��
+			// 页面转发
 			return "redirect:/order/ordersucc.action";
 		} else {
 
@@ -232,10 +230,10 @@ public class OrderController {
 			Integer productnumber) throws Exception {
 
 		customerid = (Integer) session.getAttribute("customerid");
-		// ��ȡgoodDetailҳ�洫���session firetpay��times
+		// 获取goodDetail页面传输的session firetpay和times
 		loan=Float.parseFloat(request.getParameter("loan"));
 		times = Integer.valueOf(request.getParameter("times"));
-		// ��ȡinsertStage�е�productnumber��
+		// 获取insertStage中的productnumber；
 		System.out.println(loan+"%%%%");
 		List<WdbProductsCustom> wdbProductsList=productsService.findProductsType(10);
 		System.out.println(wdbProductsList.get(0).getQuotoprice()+"$$$$$");
@@ -246,15 +244,15 @@ public class OrderController {
 			 products = (WdbProductsCustom) it.next();
 			
 			 if(products.getQuotoprice().equals(loan)){
-				 System.out.println(products.getQuotoprice()+"������������������");
+				 System.out.println(products.getQuotoprice()+"￥￥￥￥￥￥￥￥￥");
 				 productnumber =products.getProductnumber(); 
-				 System.out.println("��ƷID" + productnumber);
+				 System.out.println("商品ID" + productnumber);
 		 }
 
 		}
 		
-		System.out.println("��ƷID" + productnumber);
-		// ��session��õ�formֵ��ʱд��stageServiceImpl
+		System.out.println("商品ID" + productnumber);
+		// 将session获得的form值暂时写入stageServiceImpl
 		wdbOrdersCustom.setTimes(times);
 
 		wdbOrdersCustom.setProductnumber(productnumber);
@@ -264,26 +262,26 @@ public class OrderController {
 				.findCustomerById(customerid);
 		WdbProductsCustom wdbProductsCustom = productsService
 				.findProductsByProductNumber(productnumber);
-		// �����׸�
+		// 计算首付
 		wdbOrdersCustom.setHasfirstpay((float) 0.00);
-		// ����ÿ��Ӧ�����
+		// 计算每期应还金额
 		wdbOrdersCustom
 				.setRepayment((wdbProductsCustom.getQuotoprice() )
 						/ times);
-		System.out.println("�û�id" + customerid);
-		System.out.println("ҳ�洫ֵ���룺" + pwd2);
+		System.out.println("用户id" + customerid);
+		System.out.println("页面传值密码：" + pwd2);
 
 	
 		String Ordernumber = wdbOrdersCustom.getOrdernumber();
 		wdbRepayments.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setOrdernumber(Ordernumber);
 		wdbStagesCustom.setRepaystatus(0);
-		// stages���м���ÿ��Ӧ�����
+		// stages表中计算每期应还金额
 		wdbStagesCustom.setMoney((float) ((wdbProductsCustom.getQuotoprice()*1.005)/ times));
 
 		int c = wdbCustomersCustom.getCustcreditrest();
 		int C = c - 200;
-		// �µ��ɹ����۳���Ӧ���ö��
+		// 下单成功，扣除相应引用额度
 		
 			wdbCustomersCustom.setCustcreditrest(C);
 
@@ -342,9 +340,9 @@ public class OrderController {
 		/*List<WdbOrdersQueryVo> wdbOrdersQueryVo =  ordersService
 			.findOrdersByCustomerId(customerid);
 	
-		//�ж��Ƿ��ж�������
+		//判断是否有多条订单
 		if(wdbOrdersQueryVo.size()>0){
-			//�ж�ǰ�������������Ƿ���ͬ
+			//判断前后两条订单号是否相同
 		
 					int lefttime =  wdbOrdersQueryVo.get(0).getTimes()-wdbOrdersQueryVo.get(0).getWdbStagesCustom().getTime()+1;
 		model.addAttribute("lefttime",lefttime);
@@ -358,15 +356,14 @@ public class OrderController {
 		}
 		
 				return "order/repaysucc";
-
 	}
 	*/
 	int count=ordersService.findOrderCountByCustomerId(customerid, ordernumber);
-	System.out.println(count+"δ�����");
+	System.out.println(count+"未还款订单");
 		
-			//�ж��Ƿ��ж�������
+			//判断是否有多条订单
 			if(count!=0){
-				//�ж�ǰ�������������Ƿ���ͬ
+				//判断前后两条订单号是否相同
 				WdbOrdersQueryVo wdbOrdersQueryVo =  ordersService
 						.findOrderByCustomerIdAndOrderNumber(customerid, ordernumber);
 						int lefttime =  wdbOrdersQueryVo.getTimes()-wdbOrdersQueryVo.getWdbStagesCustom().getTime()+1;
@@ -399,7 +396,7 @@ public class OrderController {
 	public String overdue(String ordernumber,Model model)throws Exception{
 		
 		model.addAttribute("ordernumber",ordernumber);
-		System.out.println(ordernumber+"���ڶ������");
+		System.out.println(ordernumber+"逾期订单编号");
 		
 		return"order/overdue";
 		
@@ -419,10 +416,10 @@ public class OrderController {
 		
 	duekey=request.getParameter("duekey");
 		
-		System.out.println("Ԥ��ʱ�䣺"+duekey);
+		System.out.println("预期时间："+duekey);
 		stagesService.updateStagesForOverdue(ordernumber, duekey);
-		//���������ύ�󣬹ر��Ӵ��ڵ�����ˢ�¸�����
-		model.addAttribute("refresh","ˢ�º��ҳ��"+duekey);
+		//逾期申请提交后，关闭子窗口弹窗，刷新父窗口
+		model.addAttribute("refresh","刷新后的页面"+duekey);
 		  PrintWriter out = response.getWriter();  
 	        out.print("<script>window.parent.location.href='../customer/Personal.action?duekey="+duekey+"';</script>");  
 	        out.flush();
@@ -431,4 +428,3 @@ public class OrderController {
 	}
 	
 }
-

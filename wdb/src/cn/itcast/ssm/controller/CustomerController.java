@@ -42,11 +42,11 @@ public class CustomerController {
 	@Autowired
 	private RepaymentsService repaymentsService;
 	
-	//×¢²á
+	//æ³¨å†Œ
 	@RequestMapping(value="/Registered",method={RequestMethod.POST,RequestMethod.GET})
-	//@RequestParamÀï±ßÖ¸¶¨request´«Èë²ÎÊıÃû³ÆºÍĞÎ²Î½øĞĞ°ó¶¨¡£
-	//Í¨¹ırequiredÊôĞÔÖ¸¶¨²ÎÊıÊÇ·ñ±ØĞëÒª´«Èë
-	//Í¨¹ıdefaultValue¿ÉÒÔÉèÖÃÄ¬ÈÏÖµ£¬Èç¹ûid²ÎÊıÃ»ÓĞ´«Èë£¬½«Ä¬ÈÏÖµºÍĞÎ²Î°ó¶¨¡£
+	//@RequestParamé‡Œè¾¹æŒ‡å®šrequestä¼ å…¥å‚æ•°åç§°å’Œå½¢å‚è¿›è¡Œç»‘å®šã€‚
+	//é€šè¿‡requiredå±æ€§æŒ‡å®šå‚æ•°æ˜¯å¦å¿…é¡»è¦ä¼ å…¥
+	//é€šè¿‡defaultValueå¯ä»¥è®¾ç½®é»˜è®¤å€¼ï¼Œå¦‚æœidå‚æ•°æ²¡æœ‰ä¼ å…¥ï¼Œå°†é»˜è®¤å€¼å’Œå½¢å‚ç»‘å®šã€‚
 	public String registered()throws Exception {
 
 		return "customer/Registered";
@@ -62,42 +62,42 @@ public class CustomerController {
 		   List<WdbCustomersCustom> customerslist = customersService.findCustomerList(wdbCustomersQueryVo);
 			 Iterator it =  customerslist.iterator();
 			    WdbCustomersCustom custom;
-			    //ÉèÖÃ²ÎÊıflag,ÓÃÓÚ±éÀú¼ÇÂ¼ÖĞÅĞ¶Ï×¢²áĞÅÏ¢ÊÇ·ñÓëÊı¾İ¿âÓĞÖØ¸´
+			    //è®¾ç½®å‚æ•°flag,ç”¨äºéå†è®°å½•ä¸­åˆ¤æ–­æ³¨å†Œä¿¡æ¯æ˜¯å¦ä¸æ•°æ®åº“æœ‰é‡å¤
 			    boolean flag=true;
 			    while(it.hasNext()){
 			    	custom = (WdbCustomersCustom) it.next();
-			    	//Èô¸ÃÊÖ»úºÅÒÑ±»×¢²á£¬¸ø³ö´íÎóÌáÊ¾£¬²¢¸ü¸ÄflagÎªflase
+			    	//è‹¥è¯¥æ‰‹æœºå·å·²è¢«æ³¨å†Œï¼Œç»™å‡ºé”™è¯¯æç¤ºï¼Œå¹¶æ›´æ”¹flagä¸ºflase
 			    		if(custom.getCustphonenum().equals(custphonenum)){
-			    		model.addAttribute("telError","¸ÃÊÖ»úºÅÒÑ±»×¢²á");
+			    		model.addAttribute("telError","è¯¥æ‰‹æœºå·å·²è¢«æ³¨å†Œ");
 			    		
-			    		System.out.println("»ñµÃ1");
+			    		System.out.println("è·å¾—1");
 			    		flag=false;
 			    		
 			    		}
 			    		if(custom.getCustnick().equals(custnick)){
-			    			model.addAttribute("usernameError","¸ÃÓÃ»§ÃûÒÑ´æÔÚ");
-			    			System.out.println("»ñµÃ2");
+			    			model.addAttribute("usernameError","è¯¥ç”¨æˆ·åå·²å­˜åœ¨");
+			    			System.out.println("è·å¾—2");
 			    			flag=false;
 			    		}
-			    		//Ö±µ½±éÀúÍê×îºóÒ»ÌõÊı¾İÇÒ¸ù¾İflagÅĞ¶ÏÓĞ´íÎó²ÅÌø×ª
+			    		//ç›´åˆ°éå†å®Œæœ€åä¸€æ¡æ•°æ®ä¸”æ ¹æ®flagåˆ¤æ–­æœ‰é”™è¯¯æ‰è·³è½¬
 			    		while(!it.hasNext()&&flag==false){
-			    			System.out.println("»ñµÃ3");
+			    			System.out.println("è·å¾—3");
 			    		return "customer/Registered";
 			    	}
 			    	
 			    	}
 			    
-			    		//ÈôÎŞ´íÎó£¬Ôò×¢²á³É¹¦
+			    		//è‹¥æ— é”™è¯¯ï¼Œåˆ™æ³¨å†ŒæˆåŠŸ
 			    wdbCustomersCustom.setCustcreditrest(3000);
 			    wdbCustomersCustom.setCuststatus( 1);
 			    wdbCustomersCustom.setRoleid( 1);
 			    customersService.insertCustomer(wdbCustomersCustom);
 			    session.setAttribute("customerid",wdbCustomersCustom.getCustomerid());
-			    System.out.println(wdbCustomersCustom.getCustomerid()+"ÓÃ»§id");
+			    System.out.println(wdbCustomersCustom.getCustomerid()+"ç”¨æˆ·id");
 	    		return "customer/Regsucc";	
 		
 	}
-	//×¢²á2
+	//æ³¨å†Œ2
 	@RequestMapping(value="/Regsucc",method={RequestMethod.POST,RequestMethod.GET})
 
 	public String regsucc()throws Exception {
@@ -107,11 +107,11 @@ public class CustomerController {
 
 	
 	
-	//ÍêÉÆ¸öÈËĞÅÏ¢
+	//å®Œå–„ä¸ªäººä¿¡æ¯
 	@RequestMapping(value="/perinfo",method={RequestMethod.POST,RequestMethod.GET})
-	//@RequestParamÀï±ßÖ¸¶¨request´«Èë²ÎÊıÃû³ÆºÍĞÎ²Î½øĞĞ°ó¶¨¡£
-	//Í¨¹ırequiredÊôĞÔÖ¸¶¨²ÎÊıÊÇ·ñ±ØĞëÒª´«Èë
-	//Í¨¹ıdefaultValue¿ÉÒÔÉèÖÃÄ¬ÈÏÖµ£¬Èç¹ûid²ÎÊıÃ»ÓĞ´«Èë£¬½«Ä¬ÈÏÖµºÍĞÎ²Î°ó¶¨¡£
+	//@RequestParamé‡Œè¾¹æŒ‡å®šrequestä¼ å…¥å‚æ•°åç§°å’Œå½¢å‚è¿›è¡Œç»‘å®šã€‚
+	//é€šè¿‡requiredå±æ€§æŒ‡å®šå‚æ•°æ˜¯å¦å¿…é¡»è¦ä¼ å…¥
+	//é€šè¿‡defaultValueå¯ä»¥è®¾ç½®é»˜è®¤å€¼ï¼Œå¦‚æœidå‚æ•°æ²¡æœ‰ä¼ å…¥ï¼Œå°†é»˜è®¤å€¼å’Œå½¢å‚ç»‘å®šã€‚
 	public String perinfo(HttpServletRequest request)throws Exception {
 		
 		return "customer/perinfo";
@@ -134,26 +134,26 @@ public class CustomerController {
 		 List<WdbCustomersCustom> customerlist = customersService.findCustomerList(wdbCustomersQueryVo);
 		 Iterator it =  customerlist.iterator();
 		    WdbCustomersCustom usercustom;
-		    //ÉèÖÃ²ÎÊıflag,ÓÃÓÚ±éÀú¼ÇÂ¼ÖĞÅĞ¶Ï×¢²áĞÅÏ¢ÊÇ·ñÓëÊı¾İ¿âÓĞÖØ¸´
+		    //è®¾ç½®å‚æ•°flag,ç”¨äºéå†è®°å½•ä¸­åˆ¤æ–­æ³¨å†Œä¿¡æ¯æ˜¯å¦ä¸æ•°æ®åº“æœ‰é‡å¤
 		    boolean flag=true;
 		    while(it.hasNext()){
 		    	usercustom =  (WdbCustomersCustom) it.next();
-		    	//Èô¸ÃÊÖ»úºÅÒÑ±»×¢²á£¬¸ø³ö´íÎóÌáÊ¾£¬²¢¸ü¸ÄflagÎªflase
+		    	//è‹¥è¯¥æ‰‹æœºå·å·²è¢«æ³¨å†Œï¼Œç»™å‡ºé”™è¯¯æç¤ºï¼Œå¹¶æ›´æ”¹flagä¸ºflase
 		    		if(idcard.equals(wdbCustomersCustom.getCustidcard())){
-		    		model.addAttribute("idcardError","¸ÃÉí·İÖ¤ºÅÒÑ±»×¢²á");
+		    		model.addAttribute("idcardError","è¯¥èº«ä»½è¯å·å·²è¢«æ³¨å†Œ");
 		    		
-		    		System.out.println("»ñµÃ1");
+		    		System.out.println("è·å¾—1");
 		    		flag=false;
 		    		
 		    		}
 		    		if(email.equals(wdbCustomersCustom.getCustemail())){
-		    			model.addAttribute("emailError","¸ÃÓÊÏäÒÑ±»×¢²á");
-		    			System.out.println("»ñµÃ2");
+		    			model.addAttribute("emailError","è¯¥é‚®ç®±å·²è¢«æ³¨å†Œ");
+		    			System.out.println("è·å¾—2");
 		    			flag=false;
 		    		}
-		    		//Ö±µ½±éÀúÍê×îºóÒ»ÌõÊı¾İÇÒ¸ù¾İflagÅĞ¶ÏÓĞ´íÎó²ÅÌø×ª
+		    		//ç›´åˆ°éå†å®Œæœ€åä¸€æ¡æ•°æ®ä¸”æ ¹æ®flagåˆ¤æ–­æœ‰é”™è¯¯æ‰è·³è½¬
 		    		while(!it.hasNext()&&flag==false){
-		    			System.out.println("»ñµÃ3");
+		    			System.out.println("è·å¾—3");
 		    		return "customer/perinfo";
 		    	}
 		    	
@@ -180,25 +180,25 @@ public class CustomerController {
 	
 	}
 	
-	//µÇÂ¼
+	//ç™»å½•
 	@RequestMapping(value="/Login", method={RequestMethod.POST,RequestMethod.GET})
 	
 	public String Login()throws Exception {
 		
 		return "customer/Login";
 	}
-	//@RequestParamÀï±ßÖ¸¶¨request´«Èë²ÎÊıÃû³ÆºÍĞÎ²Î½øĞĞ°ó¶¨¡£
-	//Í¨¹ırequiredÊôĞÔÖ¸¶¨²ÎÊıÊÇ·ñ±ØĞëÒª´«Èë
-	//Í¨¹ıdefaultValue¿ÉÒÔÉèÖÃÄ¬ÈÏÖµ£¬Èç¹ûid²ÎÊıÃ»ÓĞ´«Èë£¬½«Ä¬ÈÏÖµºÍĞÎ²Î°ó¶¨¡£
+	//@RequestParamé‡Œè¾¹æŒ‡å®šrequestä¼ å…¥å‚æ•°åç§°å’Œå½¢å‚è¿›è¡Œç»‘å®šã€‚
+	//é€šè¿‡requiredå±æ€§æŒ‡å®šå‚æ•°æ˜¯å¦å¿…é¡»è¦ä¼ å…¥
+	//é€šè¿‡defaultValueå¯ä»¥è®¾ç½®é»˜è®¤å€¼ï¼Œå¦‚æœidå‚æ•°æ²¡æœ‰ä¼ å…¥ï¼Œå°†é»˜è®¤å€¼å’Œå½¢å‚ç»‘å®šã€‚
 	
 	
 	
-	 //µÇÂ¼ÑéÖ¤
+	 //ç™»å½•éªŒè¯
 	@RequestMapping(value="/LoginCheck",method={RequestMethod.POST,RequestMethod.GET})
 	public String findUserByname(HttpServletRequest request,  HttpSession session,String custnick, String custloginpwd, WdbCustomersQueryVo wdbCustomersQueryVo,String LoginDate ) throws Exception {
 	
-           System.out.println("ÓÃ»§"+custnick);
-           System.out.println("ÃÜÂë"+custloginpwd);
+           System.out.println("ç”¨æˆ·"+custnick);
+           System.out.println("å¯†ç "+custloginpwd);
 	    List<WdbCustomersCustom> userlist = customersService.findCustomerList(wdbCustomersQueryVo);
 	 Iterator it =  userlist.iterator();
 	    WdbCustomersCustom custom;
@@ -206,7 +206,7 @@ public class CustomerController {
 	    	custom = (WdbCustomersCustom) it.next();
 	    	
 	    	if(custom.getCustnick().equals(custnick) &&custom.getCustloginpwd().equals(custloginpwd)){
-	    		//»ñÈ¡µÇÂ¼Ê±¼ä
+	    		//è·å–ç™»å½•æ—¶é—´
 	    		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 				 Date d = new Date();
 				 LoginDate = df.format(d);	  
@@ -214,15 +214,15 @@ public class CustomerController {
 				 session.setAttribute("LoginDate",LoginDate);
 	    		session.setAttribute("custnick",custnick);
 	    		session.setAttribute("customerid",custom.getCustomerid());
-	    		//½â¾öÖĞÎÄÂÒÂë
+	    		//è§£å†³ä¸­æ–‡ä¹±ç 
 	    		String perurl=java.net.URLDecoder.decode(request.getHeader("Referer"), "utf-8");
 	    		
 	    		 
 	    		//perurl = new String(perurl.getBytes("gbk"),"utf-8");
 	    	
-	    		System.out.println("ÉÏ´Î·ÃÎÊµØÖ·£º"+perurl);
+	    		System.out.println("ä¸Šæ¬¡è®¿é—®åœ°å€ï¼š"+perurl);
 	    		
-	    		System.out.println("µÇÂ½³É¹¦");
+	    		System.out.println("ç™»é™†æˆåŠŸ");
 	    		if(!perurl.equals("http://42.96.150.57:8080/wdb/customer/Login.action")&&!perurl.equals(null)
 	    				&&!perurl.equals("http://localhost:8080/wdb/customer/Login.action")){
 	    			return  "redirect:"+new String(perurl.getBytes("utf-8"),"ISO-8859-1");
@@ -235,19 +235,19 @@ public class CustomerController {
 		return "customer/Login";	
 	}
 	    
-	//ÍË³ö
+	//é€€å‡º
 		@RequestMapping("/Logout")
 		public String loginout(HttpSession session)throws Exception{
 			session.invalidate();
 			return "redirect:/products/productsList.action";
 		}   
 	  
-	//¸öÈËÖĞĞÄ
+	//ä¸ªäººä¸­å¿ƒ
 		@RequestMapping(value="/Personal",method={RequestMethod.POST,RequestMethod.GET})
 		public String Personal(HttpSession session,Integer customerid,Model model)throws Exception{
 			customerid=(Integer) session.getAttribute("customerid");
 			List<WdbOrdersQueryVo> wdbOrdersQueryVo = ordersService.findOrdersByCustomerId(customerid);
-			//²éÕÒÓÃ»§ĞÅÏ¢£¬»ñÈ¡ĞÅÓÃ¶î¶È
+			//æŸ¥æ‰¾ç”¨æˆ·ä¿¡æ¯ï¼Œè·å–ä¿¡ç”¨é¢åº¦
 			WdbCustomersCustom wdbCustomersCustom=customersService.findCustomerById(customerid);
 			model.addAttribute("wdbCustomersCustom",wdbCustomersCustom);
 			System.out.println(session.getAttribute("LoginDate"));
@@ -270,7 +270,7 @@ public class CustomerController {
 		
 		
 		
-		//¸öÈËÖĞĞÄÎÒµÄ¶©µ¥Ò³Ãæ
+		//ä¸ªäººä¸­å¿ƒæˆ‘çš„è®¢å•é¡µé¢
 				@RequestMapping("/PersonalOrders")
 				public String PersonalOrders(HttpSession session,Integer customerid,Model model,HttpServletRequest request)throws Exception{
 					
@@ -280,7 +280,7 @@ public class CustomerController {
 					customerid=(Integer) session.getAttribute("customerid");
 					//List<WdbOrdersQueryVo> wdbOrdersQueryVo = ordersService.findOrdersByCustomerId(customerid);
 					List<WdbOrdersQueryVo> wdbOrdersQueryVo = ordersService.findAllOrdersByCustomerId(customerid);
-					//²éÕÒÓÃ»§ĞÅÏ¢£¬»ñÈ¡ĞÅÓÃ¶î¶È
+					//æŸ¥æ‰¾ç”¨æˆ·ä¿¡æ¯ï¼Œè·å–ä¿¡ç”¨é¢åº¦
 					WdbCustomersCustom wdbCustomersCustom=customersService.findCustomerById(customerid);
 					
 					   
@@ -293,7 +293,7 @@ public class CustomerController {
 						
 					
 				}
-				//È·ÈÏÊÕ»õ
+				//ç¡®è®¤æ”¶è´§
 				@RequestMapping("/ConfirmGoods")
 				public String ConfirmGoods(HttpSession session,Integer customerid,Model model,HttpServletRequest request)throws Exception{
 					
@@ -301,13 +301,13 @@ public class CustomerController {
 						String ordernumber=request.getParameter("ordernumber");
 						WdbOrders wdbOrders=ordersService.findOrderAndUpdateByOrdernumber(ordernumber);
 						
-						System.out.println("²»Îª¿Õ"+wdbOrders.getOrdernumber());
+						System.out.println("ä¸ä¸ºç©º"+wdbOrders.getOrdernumber());
 						System.out.println(ordernumber);				
 					}
 					return "forward:PersonalOrders.action";					
 				}
 				
-				//¸öÈËÖĞĞÄ»¹¿î¼ÇÂ¼Ò³Ãæ
+				//ä¸ªäººä¸­å¿ƒè¿˜æ¬¾è®°å½•é¡µé¢
 				@RequestMapping("/repaymentsRecord")
 				public String repaymentsRecord(HttpSession session,Integer customerid,Model model)throws Exception{
 					
@@ -316,7 +316,7 @@ public class CustomerController {
 					customerid=(Integer) session.getAttribute("customerid");
 					//List<WdbOrdersQueryVo> wdbOrdersQueryVo = ordersService.findOrdersByCustomerId(customerid);
 					List<WdbRepaymentsCustom> WdbRepaymentsCustom = repaymentsService.findAllRepaymentsByCustomerId(customerid);
-					//²éÕÒÓÃ»§ĞÅÏ¢£¬»ñÈ¡ĞÅÓÃ¶î¶È
+					//æŸ¥æ‰¾ç”¨æˆ·ä¿¡æ¯ï¼Œè·å–ä¿¡ç”¨é¢åº¦
 					WdbCustomersCustom wdbCustomersCustom=customersService.findCustomerById(customerid);
 				if(WdbRepaymentsCustom.size()>0){
 					String createdate=(new SimpleDateFormat("yyyy-MM-dd HH:MM:SS")).format(WdbRepaymentsCustom.get(0).getCreatedate());    
@@ -338,11 +338,11 @@ public class CustomerController {
 	
 		@RequestMapping("EditAddress")
 		public String EditAddress(HttpServletRequest request)throws Exception{
-			System.out.println("µØÖ·"+request.getParameter("province")+","
+			System.out.println("åœ°å€"+request.getParameter("province")+","
 		+request.getParameter("city")+","+request.getParameter("county")+","+request.getParameter("addr"));
 			String address=request.getParameter("province")+","
 					+request.getParameter("city")+","+request.getParameter("county")+","+request.getParameter("addr");
-			System.out.println("µØÖ·"+address);
+			System.out.println("åœ°å€"+address);
 			return "customer/EditAddress";
 			
 		}
@@ -361,11 +361,3 @@ public class CustomerController {
 		
 		
 	    }
-	
-	  //  if(userlist.size()>1){
-	    	
-
-	   
-
-	
-	

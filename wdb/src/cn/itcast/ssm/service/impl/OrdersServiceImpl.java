@@ -3,8 +3,6 @@ package cn.itcast.ssm.service.impl;
 import java.util.Date;
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import cn.itcast.ssm.mapper.WdbCustomersMapper;
@@ -44,13 +42,13 @@ public class OrdersServiceImpl implements OrdersService {
 		int T=wdbOrdersCustom.getTimes();
 		Date d=new Date();
 		
-		//¹ºÂòÉÌÆ·ºó¿Û³ıÓÃ»§ÏàÓ¦ĞÅÓÃ¶î¶È
+		//è´­ä¹°å•†å“åæ‰£é™¤ç”¨æˆ·ç›¸åº”ä¿¡ç”¨é¢åº¦
 		wdbCustomersMpper.updateByPrimaryKey(wdbCustomersCustom);
 		
 		for (Integer i = 1; i <= T; i++) {
 			if (wdbOrdersCustom != null) {
 				wdbStagesCustom.setTime(i);
-				//¼ÆËãÃ¿ÆÚ»¹¿îÊ±¼ä
+				//è®¡ç®—æ¯æœŸè¿˜æ¬¾æ—¶é—´
 				Date date2 = new Date(d.getTime()+ (long)i*30 * 24 * 60 * 60 * 1000);
 				Date date3 = new Date(d.getTime()+ (long)(i+1)*30 * 24 * 60 * 60 * 1000);
 				wdbStagesCustom.setBegindate(date2);
@@ -71,7 +69,7 @@ public class OrdersServiceImpl implements OrdersService {
 			wdbStagesCustom.setPaydate(d);
 			wdbStagesMapper.insert(wdbStagesCustom);
 			wdbRepayments.setCreatedate(d);
-			wdbRepayments.setDetail("Ê×¸¶");
+			wdbRepayments.setDetail("é¦–ä»˜");
 			wdbStagesCustom.setOrdernumber(wdbOrdersCustom.getOrdernumber());
 			wdbRepaymentsMapper.insert(wdbRepayments);
 		}
@@ -98,14 +96,14 @@ public class OrdersServiceImpl implements OrdersService {
 		wdbRepayments.setOrdernumber(wdbOrdersQueryVo
 				.getOrdernumber());
 		if(wdbOrdersQueryVo.getWdbProductsCustom().getCategoryid()==10){
-			wdbRepayments.setDetail("Î¢´û¿î»¹¿î");	
+			wdbRepayments.setDetail("å¾®è´·æ¬¾è¿˜æ¬¾");	
 		}else{
-		wdbRepayments.setDetail("·ÖÆÚ¹ºÎï»¹¿î");
+		wdbRepayments.setDetail("åˆ†æœŸè´­ç‰©è¿˜æ¬¾");
 		}
 		wdbRepaymentsMapper.insert(wdbRepayments);
-		// »¹¿î±íÖĞ»ñµÃµ±Ç°Ê±¼ä£¬¼´»¹¿îÊ±¼ä
+		// è¿˜æ¬¾è¡¨ä¸­è·å¾—å½“å‰æ—¶é—´ï¼Œå³è¿˜æ¬¾æ—¶é—´
 					
-			//updateByExampleSelectiveÓÃ·¨http://blog.csdn.net/zhanwentao2/article/details/6951207		
+			//updateByExampleSelectiveç”¨æ³•http://blog.csdn.net/zhanwentao2/article/details/6951207		
 		WdbStagesExample example=new WdbStagesExample();
 		Criteria criteria = example.createCriteria();
 		criteria.andTimeEqualTo(wdbOrdersQueryVo.getWdbStagesCustom().getTime());
@@ -138,7 +136,7 @@ public class OrdersServiceImpl implements OrdersService {
 		List<WdbStages> wdbStages=wdbStagesMapper.selectByExample(example);
 		//
 		for(int i=t;i<T;i++){
-			//ĞŞ¸ÄÓâÆÚ»¹¿îÊ±¼ä
+			//ä¿®æ”¹é€¾æœŸè¿˜æ¬¾æ—¶é—´
 			
 			
 			wdbStages.get(i).setBegindate(GetDate.dateAdd(1, wdbStages.get(i).getBegindate(), duekey));	
@@ -185,5 +183,3 @@ public class OrdersServiceImpl implements OrdersService {
 	
 		
 }
-
-
